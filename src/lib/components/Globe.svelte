@@ -50,12 +50,13 @@
 		ringsCamera.position.set(0, 0, 50);
 
 		const renderer = new WebGLRenderer({ antialias: true, alpha: true });
-		renderer.setSize(width, height);
+		renderer.setSize(width, height, false);
 		renderer.toneMapping = ACESFilmicToneMapping;
 		renderer.outputEncoding = sRGBEncoding;
 		renderer.physicallyCorrectLights = true;
 		renderer.shadowMap.enabled = true;
 		renderer.shadowMap.type = PCFSoftShadowMap;
+		renderer.domElement.style.maxWidth = '100%';
 		container.appendChild(renderer.domElement);
 
 		const sunLight = new DirectionalLight(new Color('#FFFFFF').convertSRGBToLinear(), 3.5);
@@ -384,7 +385,11 @@
 
 <svelte:window on:mousemove={onMouseMove} />
 
-<div style="width: {width}px; height: {height}px;" bind:this={container} class="overflow-hidden">
+<div
+	style="width: {width}px; height: {height}px;"
+	bind:this={container}
+	class="overflow-hidden max-w-full"
+>
 	{#if fallbackImage}
 		<img src="/assets/globe.png" alt="Globe" />
 	{/if}
