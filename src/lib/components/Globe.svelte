@@ -36,8 +36,10 @@
 	const height = 500;
 
 	let mousePos = new Vector2(0, 0);
-	let container: HTMLDivElement;
+	let canvas: HTMLCanvasElement;
 	let fallbackImage = true;
+
+	let animateOnMouseMove = (e: MouseEvent) => {};
 
 	onMount(() => {
 		const scene = new Scene();
@@ -49,15 +51,13 @@
 		const ringsCamera = new PerspectiveCamera(45, width / height, 0.1, 1000);
 		ringsCamera.position.set(0, 0, 50);
 
-		const renderer = new WebGLRenderer({ antialias: true, alpha: true });
+		const renderer = new WebGLRenderer({ antialias: true, alpha: true, canvas });
 		renderer.setSize(width, height, false);
 		renderer.toneMapping = ACESFilmicToneMapping;
 		renderer.outputEncoding = sRGBEncoding;
 		renderer.physicallyCorrectLights = true;
 		renderer.shadowMap.enabled = true;
 		renderer.shadowMap.type = PCFSoftShadowMap;
-		renderer.domElement.style.maxWidth = '100%';
-		container.appendChild(renderer.domElement);
 
 		const sunLight = new DirectionalLight(new Color('#FFFFFF').convertSRGBToLinear(), 3.5);
 		sunLight.position.set(10, 20, 10);
@@ -204,7 +204,7 @@
 
 			let daytime = true;
 			let animating = false;
-			window.addEventListener('mousemove', (e) => {
+			animateOnMouseMove = (e) => {
 				if (animating) return;
 
 				let anim = [0, 1];
@@ -257,8 +257,7 @@
 					easing: 'easeInOutSine',
 					duration: 500,
 				});
-			});
-
+			};
 			let clock = new Clock();
 
 			renderer.setAnimationLoop(() => {
@@ -380,6 +379,8 @@
 
 		mousePos.x = x * 0.0003;
 		mousePos.y = y * 0.0003;
+
+		animateOnMouseMove(e);
 	}
 </script>
 
@@ -387,10 +388,10 @@
 
 <div
 	style="width: {width}px; height: {height}px;"
-	bind:this={container}
-	class="overflow-hidden max-w-full"
+	class="overflow-hidden max-w-full flex items-center justify-center"
 >
 	{#if fallbackImage}
 		<img src="/assets/globe.png" alt="Globe" />
 	{/if}
+	<canvas bind:this={canvas} class:hidden={fallbackImage} class="max-w-full" />
 </div>
