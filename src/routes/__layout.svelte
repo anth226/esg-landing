@@ -1,5 +1,11 @@
 <script>
-  import "../app.css";
+	import Header from '$lib/components/Header.svelte';
+	import '../app.css';
+	import '@fontsource/eb-garamond';
+	import '@fontsource/poppins';
 </script>
 
-<slot />
+<Header />
+<main>
+	<slot />
+</main>
