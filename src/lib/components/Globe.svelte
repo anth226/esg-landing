@@ -30,8 +30,6 @@
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
 	import anime from 'animejs';
 
-	// let sunBackground = document.querySelector('.sun-background');
-	// let moonBackground = document.querySelector('.moon-background');
 	const width = 500;
 	const height = 500;
 
@@ -85,10 +83,6 @@
 		moonLight.shadow.camera.right = 10;
 		scene.add(moonLight);
 
-		// // Create a helper for the shadow camera (optional)
-		// const helper = new CameraHelper( light.shadow.camera );
-		// scene.add( helper );
-
 		const controls = new OrbitControls(camera, renderer.domElement);
 		controls.target.set(0, 0, 0);
 		controls.enableZoom = false;
@@ -140,8 +134,8 @@
 					clearcoat: 0.5,
 				}),
 			);
-			sphere.sunEnvIntensity = 0.4;
-			sphere.moonEnvIntensity = 0.1;
+			sphere.userData.sunEnvIntensity = 0.4;
+			sphere.userData.moonEnvIntensity = 0.1;
 			sphere.rotation.y += Math.PI * 1.25;
 			sphere.receiveShadow = true;
 			scene.add(sphere);
@@ -159,8 +153,8 @@
 				}),
 			);
 			ring1.name = 'ring';
-			ring1.sunOpacity = 0.35;
-			ring1.moonOpacity = 0.03;
+			ring1.userData.sunOpacity = 0.35;
+			ring1.userData.moonOpacity = 0.03;
 			ringsScene.add(ring1);
 
 			const ring2 = new Mesh(
@@ -173,8 +167,8 @@
 				}),
 			);
 			ring2.name = 'ring';
-			ring2.sunOpacity = 0.35;
-			ring2.moonOpacity = 0.1;
+			ring2.userData.sunOpacity = 0.35;
+			ring2.userData.moonOpacity = 0.1;
 			ringsScene.add(ring2);
 
 			const ring3 = new Mesh(
@@ -187,8 +181,8 @@
 				}),
 			);
 			ring3.name = 'ring';
-			ring3.sunOpacity = 0.35;
-			ring3.moonOpacity = 0.03;
+			ring3.userData.sunOpacity = 0.35;
+			ring3.userData.moonOpacity = 0.03;
 			ringsScene.add(ring3);
 
 			// https://sketchfab.com/3d-models/cartoon-plane-f312ec9f87794bdd83630a3bc694d8ea#download
@@ -209,9 +203,9 @@
 
 				let anim = [0, 1];
 
-				if (e.clientX > width - 200 && !daytime) {
+				if (e.clientX > window.innerWidth * 0.5 && !daytime) {
 					anim = [1, 0];
-				} else if (e.clientX < 200 && daytime) {
+				} else if (e.clientX < window.innerWidth * 0.5 && daytime) {
 					anim = [0, 1];
 				} else {
 					return;
@@ -239,20 +233,20 @@
 							child.traverse((object) => {
 								if (object instanceof Mesh && object.material.envMap) {
 									object.material.envMapIntensity =
-										object.sunEnvIntensity * (1 - obj.t) + object.moonEnvIntensity * obj.t;
+										object.userData.sunEnvIntensity * (1 - obj.t) +
+										object.userData.moonEnvIntensity * obj.t;
 								}
 							});
 						});
 
 						ringsScene.children.forEach((child, i) => {
 							child.traverse((object) => {
-								object.material.opacity =
-									object.sunOpacity * (1 - obj.t) + object.moonOpacity * obj.t;
+								if (object instanceof Mesh) {
+									object.material.opacity =
+										object.userData.sunOpacity * (1 - obj.t) + object.userData.moonOpacity * obj.t;
+								}
 							});
 						});
-
-						// sunBackground.style.opacity = 1 - obj.t;
-						// moonBackground.style.opacity = obj.t;
 					},
 					easing: 'easeInOutSine',
 					duration: 500,
@@ -330,8 +324,8 @@
 		plane.traverse((object) => {
 			if (object instanceof Mesh) {
 				object.material.envMap = envMap;
-				object.sunEnvIntensity = 1;
-				object.moonEnvIntensity = 0.3;
+				object.userData.sunEnvIntensity = 1;
+				object.userData.moonEnvIntensity = 0.3;
 				object.castShadow = true;
 				object.receiveShadow = true;
 			}
@@ -352,8 +346,8 @@
 				alphaMap: trailTexture,
 			}),
 		);
-		trail.sunEnvIntensity = 3;
-		trail.moonEnvIntensity = 0.7;
+		trail.userData.sunEnvIntensity = 3;
+		trail.userData.moonEnvIntensity = 0.7;
 		trail.rotateX(Math.PI);
 		trail.translateY(1.1);
 
@@ -374,6 +368,9 @@
 	}
 
 	function onMouseMove(e: MouseEvent) {
+		// console.log({ e });
+		console.log(canvas.clientLeft);
+
 		let x = e.clientX - innerWidth * 0.5;
 		let y = e.clientY - innerHeight * 0.5;
 
