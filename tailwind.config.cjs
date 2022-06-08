@@ -17,6 +17,7 @@ module.exports = {
 						fontFamily: 'Poppins, sans-serif',
 					},
 					'--rounded-btn': '0px',
+					'--rounded-box': '0px',
 				},
 			},
 		],

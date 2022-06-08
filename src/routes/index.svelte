@@ -33,7 +33,7 @@
 							type="text"
 							id="hero-email"
 							placeholder="john@example.com"
-							class="input bg-white text-black"
+							class="input w-full bg-white text-black"
 						/>
 					</div>
 					<button class="btn btn-primary">Schedule a Demo</button>
@@ -44,7 +44,7 @@
 
 		<div class="divider my-0" />
 
-		<div class="flex gap-20 mb-6 justify-start">
+		<div class="flex flex-wrap gap-x-20 gap-y-6 mb-6 justify-start">
 			<Stat title="Stakeholder Reports" value="10,000+" />
 			<Stat title="Stakeholder Reports" value="10,000+" />
 			<Stat title="Stakeholder Reports" value="10,000+" />
