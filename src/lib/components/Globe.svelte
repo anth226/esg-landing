@@ -37,6 +37,7 @@
 
 	let mousePos = new Vector2(0, 0);
 	let container: HTMLDivElement;
+	let fallbackImage = true;
 
 	onMount(() => {
 		const scene = new Scene();
@@ -94,19 +95,31 @@
 		controls.enableDamping = true;
 
 		(async function () {
-			let pmrem = new PMREMGenerator(renderer);
-			let envmapTexture = await new RGBELoader()
-				.setDataType(FloatType)
-				.loadAsync('assets/old_room_2k.hdr'); // thanks to https://polyhaven.com/hdris !
-			let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
+			const [
+				envmapTexture,
+				bump,
+				map,
+				spec,
+				planeTrailMask,
+				{
+					scene: {
+						children: [plane],
+					},
+				},
+			] = await Promise.all([
+				new RGBELoader().setDataType(FloatType).loadAsync('assets/old_room_2k.hdr'), // thanks to https://polyhaven.com/hdris !
 
-			let textures = {
 				// thanks to https://free3d.com/user/ali_alkendi !
-				bump: await new TextureLoader().loadAsync('assets/earthbump.jpg'),
-				map: await new TextureLoader().loadAsync('assets/earthmap.jpg'),
-				spec: await new TextureLoader().loadAsync('assets/earthspec.jpg'),
-				planeTrailMask: await new TextureLoader().loadAsync('assets/mask.png'),
-			};
+				new TextureLoader().loadAsync('assets/earthbump.jpg'),
+				new TextureLoader().loadAsync('assets/earthmap.jpg'),
+				new TextureLoader().loadAsync('assets/earthspec.jpg'),
+				new TextureLoader().loadAsync('assets/mask.png'),
+
+				new GLTFLoader().loadAsync('assets/plane/scene.glb'),
+			]);
+
+			let pmrem = new PMREMGenerator(renderer);
+			let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
 
 			// Important to know!
 			// textures.map.encoding = sRGBEncoding;
@@ -114,9 +127,9 @@
 			let sphere = new Mesh(
 				new SphereGeometry(10, 70, 70),
 				new MeshPhysicalMaterial({
-					map: textures.map,
-					roughnessMap: textures.spec,
-					bumpMap: textures.bump,
+					map: map,
+					roughnessMap: spec,
+					bumpMap: bump,
 					bumpScale: 0.05,
 					envMap,
 					envMapIntensity: 0.4,
@@ -180,13 +193,12 @@
 			// https://sketchfab.com/3d-models/cartoon-plane-f312ec9f87794bdd83630a3bc694d8ea#download
 			// "Cartoon Plane" (https://skfb.ly/UOLT) by antonmoek is licensed under Creative Commons Attribution
 			// (http://creativecommons.org/licenses/by/4.0/).
-			let plane = (await new GLTFLoader().loadAsync('assets/plane/scene.glb')).scene.children[0];
 			let planesData = [
-				makePlane(plane, textures.planeTrailMask, envMap, scene),
-				makePlane(plane, textures.planeTrailMask, envMap, scene),
-				makePlane(plane, textures.planeTrailMask, envMap, scene),
-				makePlane(plane, textures.planeTrailMask, envMap, scene),
-				makePlane(plane, textures.planeTrailMask, envMap, scene),
+				makePlane(plane, planeTrailMask, envMap, scene),
+				makePlane(plane, planeTrailMask, envMap, scene),
+				makePlane(plane, planeTrailMask, envMap, scene),
+				makePlane(plane, planeTrailMask, envMap, scene),
+				makePlane(plane, planeTrailMask, envMap, scene),
 			];
 
 			let daytime = true;
@@ -295,6 +307,7 @@
 				renderer.render(ringsScene, ringsCamera);
 				renderer.autoClear = true;
 			});
+			fallbackImage = false;
 		})();
 	});
 
@@ -371,4 +384,8 @@
 
 <svelte:window on:mousemove={onMouseMove} />
 
-<div bind:this={container} />
+<div style="width: {width}px; height: {height}px;" bind:this={container} class="overflow-hidden">
+	{#if fallbackImage}
+		<img src="/assets/globe.png" alt="Globe" />
+	{/if}
+</div>
