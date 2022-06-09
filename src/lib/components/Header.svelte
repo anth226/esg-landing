@@ -8,22 +8,22 @@
 </script>
 
 <nav class="navbar bg-base-200 text-white flex-none">
-	<div class="flex flex-1 justify-between items-center max-w-5xl mx-auto">
+	<div class="flex flex-1 justify-between items-center max-w-6xl mx-auto">
 		<div class="flex items-center gap-3">
-			<a href="/" class="text-xl flex items-center gap-2">
-				<img src="/assets/logo.png" alt="ESG Impact Logo" class="w-[4ch]" />
-				ESG Impact
+			<a href="/" class="text-2xl flex items-center gap-2">
+				<img src="/assets/logo.png" alt="ESG Impact Logo" class="w-[3.5ch]" />
+				<span class="">ESG Impact</span>
 			</a>
 
-			<ul class="menu menu-separated hidden lg:menu-horizontal p-0 gap-2">
+			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-lg">
 				{#each links as { label, href }}
 					<li><a {href}>{label}</a></li>
 				{/each}
 			</ul>
 		</div>
 		<div class="flex gap-3">
-			<button class="btn hidden lg:inline-flex btn-primary btn-outline">Sign Up</button>
-			<button class="btn hidden lg:inline-flex btn-primary">Sign In</button>
+			<a href='https://app.esgi.io/auth/registration' class="btn btn-sm hidden lg:inline-flex btn-outline-gray-300">Sign Up</a>
+			<a href='https://app.esgi.io/auth/login' class="btn btn-sm hidden lg:inline-flex btn-primary">Sign In</a>
 			<div class="dropdown dropdown-end">
 				<button tabindex="0" class="btn btn-ghost lg:hidden">
 					<svg
@@ -47,10 +47,6 @@
 					{#each links as { label, href }}
 						<li><a {href}>{label}</a></li>
 					{/each}
-					<li class="mt-2">
-						<button class="btn btn-primary btn-outline">Sign Up</button>
-					</li>
-					<li class="mt-2"><button class="btn btn-primary">Sign In</button></li>
 				</ul>
 			</div>
 		</div>
@@ -59,7 +55,7 @@
 
 <style lang="postcss">
 	.menu-separated li:not(:first-child)::before {
-		content: '';
+		content: ' ';
 		@apply w-[1px] h-4 bg-white relative top-[50%] translate-y-[-50%] translate-x-[-0.25rem];
 	}
 </style>
