@@ -30,8 +30,10 @@
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
 	import anime from 'animejs';
 
-	const width = 500;
-	const height = 500;
+	const planeSize = 0.002;
+	const globeSize = 12;
+	const width = 600;
+	const height = 600;
 
 	let mousePos = new Vector2(0, 0);
 	let canvas: HTMLCanvasElement;
@@ -43,7 +45,7 @@
 		const scene = new Scene();
 		const ringsScene = new Scene();
 
-		const camera = new PerspectiveCamera(45, width / height, 0.1, 1000);
+		const camera = new PerspectiveCamera(45, width / height, 0.5, 1000);
 		camera.position.set(0, 15, 50);
 
 		const ringsCamera = new PerspectiveCamera(45, width / height, 0.1, 1000);
@@ -102,7 +104,7 @@
 					},
 				},
 			] = await Promise.all([
-				new RGBELoader().setDataType(FloatType).loadAsync('assets/old_room_2k.hdr'), // thanks to https://polyhaven.com/hdris !
+				new RGBELoader().setDataType(FloatType).loadAsync('assets/adam_old_room.hdr'), // thanks to https://polyhaven.com/hdris !
 
 				// thanks to https://free3d.com/user/ali_alkendi !
 				new TextureLoader().loadAsync('assets/earthbump.jpg'),
@@ -120,7 +122,7 @@
 			// textures.map.encoding = sRGBEncoding;
 
 			let sphere = new Mesh(
-				new SphereGeometry(10, 70, 70),
+				new SphereGeometry(globeSize, 70, 70),
 				new MeshPhysicalMaterial({
 					map: map,
 					roughnessMap: spec,
@@ -141,7 +143,7 @@
 			scene.add(sphere);
 
 			const ring1 = new Mesh(
-				new RingGeometry(15, 13.5, 80, 1, 0),
+				new RingGeometry(15.7, 14.5, 80, 1, 0),
 				new MeshPhysicalMaterial({
 					color: new Color('#FFCB8E').convertSRGBToLinear().multiplyScalar(200),
 					roughness: 0.25,
@@ -158,7 +160,7 @@
 			ringsScene.add(ring1);
 
 			const ring2 = new Mesh(
-				new RingGeometry(16.5, 15.75, 80, 1, 0),
+				new RingGeometry(16.9, 16.4, 80, 1, 0),
 				new MeshBasicMaterial({
 					color: new Color('#FFCB8E').convertSRGBToLinear(),
 					transparent: true,
@@ -172,7 +174,7 @@
 			ringsScene.add(ring2);
 
 			const ring3 = new Mesh(
-				new RingGeometry(18, 17.75, 80),
+				new RingGeometry(18.5, 18.4, 80),
 				new MeshBasicMaterial({
 					color: new Color('#FFCB8E').convertSRGBToLinear().multiplyScalar(50),
 					transparent: true,
@@ -316,7 +318,7 @@
 		scene: Scene,
 	) {
 		let plane = planeMesh.clone();
-		plane.scale.set(0.001, 0.001, 0.001);
+		plane.scale.set(planeSize, planeSize, planeSize);
 		plane.position.set(0, 0, 0);
 		plane.rotation.set(0, 0, 0);
 		plane.updateMatrixWorld();
@@ -379,11 +381,17 @@
 
 		animateOnMouseMove(e);
 	}
+
+	function onClick(e: MouseEvent) {
+
+	}
+
 </script>
 
 <svelte:window on:mousemove={onMouseMove} />
 
 <div
+	on:click={onClick}
 	style="width: {width}px; height: {height}px;"
 	class="overflow-hidden max-w-full flex items-center justify-center"
 >

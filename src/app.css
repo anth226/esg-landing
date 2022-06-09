@@ -7,3 +7,23 @@ body,
 #root {
 	@apply h-full;
 }
+/* Changing Primary Button Style */
+[data-theme="esgi"] .btn-primary {
+	border-width: 2px;
+	color: white;
+	background-color: hsl(var(--p));}
+
+/* Scroll */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: hsl(var(--b2));
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 30px;
+	background-color: hsl(var(--p));
+}
