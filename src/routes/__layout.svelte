@@ -5,7 +5,9 @@
 	import '@fontsource/poppins';
 </script>
 
-<Header />
-<main>
-	<slot />
-</main>
+<div class="min-h-full flex flex-col">
+	<Header />
+	<main class="flex flex-col flex-grow">
+		<slot />
+	</main>
+</div>
