@@ -7,8 +7,8 @@
 	<title>ESG Impact</title>
 </svelte:head>
 
-<div class="bg-base-100">
-	<div class="max-w-5xl mx-auto px-2">
+<div class="bg-base-100 flex-1 flex flex-col">
+	<div class="max-w-5xl mx-auto px-2 flex-1 flex flex-col justify-center">
 		<div class="flex flex-col lg:flex-row w-full justify-between items-center py-4">
 			<div class="max-w-sm">
 				<h1 class="text-5xl">
