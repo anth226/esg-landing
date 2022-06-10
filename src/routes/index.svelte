@@ -1,13 +1,11 @@
 <script lang="ts">
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
-
 </script>
 
 <svelte:head>
 	<title>ESG Impact</title>
 </svelte:head>
-
 
 <section class="bg-base-100 flex-1 flex flex-col">
 	<div class="max-w-6xl w-full mx-auto px-2 flex-1 flex flex-col justify-center">
@@ -24,8 +22,8 @@
 					The transparency-as-a-service ESG platform for venture capital funds, private equity
 					groups, and companies.
 				</p>
-				<div class="flex gap-3 items-end w-full">
-					<div class="form-control font-sans">
+				<div class="flex flex-wrap gap-3 w-full">
+					<div class="form-control font-sans flex-1">
 						<input
 							type="text"
 							id="hero-email"
@@ -33,7 +31,7 @@
 							class="input bg-white text-base-100 min-w-[300px]"
 						/>
 					</div>
-					<button class="btn font-sans glass">Schedule a Demo</button>
+					<button class="btn font-sans glass flex-1 min-w-max">Schedule a Demo</button>
 				</div>
 			</div>
 			<Globe />
@@ -62,5 +60,5 @@
 </section>
 
 <section class="bg-base-100 text-black" style="background-color: salmon; height: 500px">
-	Another section here 
+	Another section here
 </section>
