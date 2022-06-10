@@ -34,6 +34,7 @@
 	import { onClickOnly } from '$lib/actions/onClickOnly';
 
 	const planeSize = 0.002;
+	const planeAltitude = 0.5;
 	const globeSize = 12;
 	const width = 600;
 	const height = 600;
@@ -354,7 +355,7 @@
 
 		return {
 			group,
-			yOff: 10.5 + Math.random() * 1.0,
+			yOff: globeSize + planeAltitude + Math.random() * 1.0,
 			rot: Math.PI * 2, // just to set a random starting point
 			rad: Math.random() * Math.PI * 0.45 + Math.PI * 0.05,
 			randomAxis: new Vector3(nr(), nr(), nr()).normalize(),
