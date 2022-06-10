@@ -1,9 +1,9 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import { preloader } from '$lib/stores/preloader';
+	import { loading } from '$lib/stores/preloader';
 </script>
 
-{#if $preloader}
+{#if $loading}
 	<div
 		class="grid place-items-center fixed w-screen h-screen bg-base-100 z-50"
 		out:fade={{ duration: 1000 }}

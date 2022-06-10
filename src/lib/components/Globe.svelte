@@ -30,7 +30,7 @@
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
 	import anime from 'animejs';
 
-	import { preloader } from '$lib/stores/preloader';
+	import { waitFor } from '$lib/stores/preloader';
 	import { onClickOnly } from '$lib/actions/onClickOnly';
 
 	const planeSize = 0.002;
@@ -94,7 +94,7 @@
 		controls.dampingFactor = 0.05;
 		controls.enableDamping = true;
 
-		(async function () {
+		async function init() {
 			const [
 				envmapTexture,
 				bump,
@@ -117,7 +117,6 @@
 
 				new GLTFLoader().loadAsync('assets/plane/scene.glb'),
 			]);
-			$preloader = false;
 
 			let pmrem = new PMREMGenerator(renderer);
 			let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
@@ -298,7 +297,9 @@
 				renderer.render(ringsScene, ringsCamera);
 				renderer.autoClear = true;
 			});
-		})();
+		}
+
+		waitFor(init());
 	});
 
 	function nr() {
