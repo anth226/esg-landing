@@ -35,7 +35,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/eb-garamond": "^4.5.8",
 		"@fontsource/poppins": "^4.5.8",
 		"animejs": "^3.2.1",
 		"daisyui": "^2.15.2",

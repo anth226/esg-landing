@@ -6,7 +6,6 @@
 	import '../app.css';
 
 	import '@fontsource/poppins';
-	import '@fontsource/eb-garamond';
 </script>
 
 <Preloader />
