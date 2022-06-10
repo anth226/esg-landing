@@ -30,6 +30,9 @@
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
 	import anime from 'animejs';
 
+	import { preloader } from '$lib/stores/preloader';
+	import { onClickOnly } from '$lib/actions/onClickOnly';
+
 	const planeSize = 0.002;
 	const globeSize = 12;
 	const width = 600;
@@ -37,7 +40,6 @@
 
 	let mousePos = new Vector2(0, 0);
 	let canvas: HTMLCanvasElement;
-	let fallbackImage = true;
 
 	let toggleDayTime = (e: MouseEvent) => {};
 
@@ -114,6 +116,7 @@
 
 				new GLTFLoader().loadAsync('assets/plane/scene.glb'),
 			]);
+			$preloader = false;
 
 			let pmrem = new PMREMGenerator(renderer);
 			let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
@@ -294,7 +297,6 @@
 				renderer.render(ringsScene, ringsCamera);
 				renderer.autoClear = true;
 			});
-			fallbackImage = false;
 		})();
 	});
 
@@ -375,13 +377,5 @@
 	style="width: {width}px; height: {height}px;"
 	class="overflow-hidden max-w-full flex items-center justify-center"
 >
-	{#if fallbackImage}
-		<img src="/assets/globe.png" alt="Globe" />
-	{/if}
-	<canvas
-		bind:this={canvas}
-		class:hidden={fallbackImage}
-		class="max-w-full"
-		on:click={toggleDayTime}
-	/>
+	<canvas bind:this={canvas} class="max-w-full" use:onClickOnly={toggleDayTime} />
 </div>
