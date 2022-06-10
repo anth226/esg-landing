@@ -39,7 +39,7 @@
 	let canvas: HTMLCanvasElement;
 	let fallbackImage = true;
 
-	let animateOnMouseMove = (e: MouseEvent) => {};
+	let toggleDayTime = (e: MouseEvent) => {};
 
 	onMount(() => {
 		const scene = new Scene();
@@ -200,19 +200,10 @@
 
 			let daytime = true;
 			let animating = false;
-			animateOnMouseMove = (e) => {
+			toggleDayTime = (e) => {
 				if (animating) return;
 
-				let anim = [0, 1];
-
-				if (e.clientX > window.innerWidth * 0.5 && !daytime) {
-					anim = [1, 0];
-				} else if (e.clientX < window.innerWidth * 0.5 && daytime) {
-					anim = [0, 1];
-				} else {
-					return;
-				}
-
+				const anim = daytime ? [0, 1] : [1, 0];
 				animating = true;
 
 				let obj = { t: 0 };
@@ -370,33 +361,27 @@
 	}
 
 	function onMouseMove(e: MouseEvent) {
-		// console.log({ e });
-		console.log(canvas.clientLeft);
-
 		let x = e.clientX - innerWidth * 0.5;
 		let y = e.clientY - innerHeight * 0.5;
 
 		mousePos.x = x * 0.0003;
 		mousePos.y = y * 0.0003;
-
-		animateOnMouseMove(e);
 	}
-
-	function onClick(e: MouseEvent) {
-
-	}
-
 </script>
 
 <svelte:window on:mousemove={onMouseMove} />
 
 <div
-	on:click={onClick}
 	style="width: {width}px; height: {height}px;"
 	class="overflow-hidden max-w-full flex items-center justify-center"
 >
 	{#if fallbackImage}
 		<img src="/assets/globe.png" alt="Globe" />
 	{/if}
-	<canvas bind:this={canvas} class:hidden={fallbackImage} class="max-w-full" />
+	<canvas
+		bind:this={canvas}
+		class:hidden={fallbackImage}
+		class="max-w-full"
+		on:click={toggleDayTime}
+	/>
 </div>
