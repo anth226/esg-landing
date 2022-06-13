@@ -30,7 +30,6 @@
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
 	import anime from 'animejs';
 
-	import { waitFor } from '$lib/stores/preloader';
 	import { onClickOnly } from '$lib/actions/onClickOnly';
 
 	const planeSize = 0.002;
@@ -41,6 +40,7 @@
 
 	let mousePos = new Vector2(0, 0);
 	let canvas: HTMLCanvasElement;
+	let globeReady = false;
 
 	let toggleDayTime = (e: MouseEvent) => {};
 
@@ -297,10 +297,22 @@
 				renderer.autoClear = false;
 				renderer.render(ringsScene, ringsCamera);
 				renderer.autoClear = true;
+
+				// Note: This snippet is used to generate the fallback image. Uncomment to use.
+
+				// if (typeof window !== 'undefined' && !window.ssCaptured) {
+				// 	let a = document.createElement('a');
+				// 	a.href = renderer.domElement.toDataURL('image/png');
+				// 	a.download = 'globe.png';
+				// 	a.click();
+				// 	window.ssCaptured = true;
+				// }
 			});
 		}
 
-		waitFor(init());
+		init().then(() => {
+			globeReady = true;
+		});
 	});
 
 	function nr() {
@@ -380,5 +392,13 @@
 	style="width: {width}px; height: {height}px;"
 	class="overflow-hidden max-w-full flex items-center justify-center"
 >
-	<canvas bind:this={canvas} class="max-w-full z-10" use:onClickOnly={toggleDayTime} />
+	{#if !globeReady}
+		<img src="/assets/globe.png" alt="Globe" />
+	{/if}
+	<canvas
+		bind:this={canvas}
+		class:hidden={!globeReady}
+		class="max-w-full"
+		use:onClickOnly={toggleDayTime}
+	/>
 </div>

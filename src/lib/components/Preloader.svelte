@@ -1,9 +1,18 @@
 <script>
+	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { loading } from '$lib/stores/preloader';
+
+	const TIMEOUT_MS = 2000;
+	let loading = true;
+
+	onMount(() => {
+		setTimeout(() => {
+			loading = false;
+		}, TIMEOUT_MS);
+	});
 </script>
 
-{#if $loading}
+{#if loading}
 	<div
 		class="grid place-items-center fixed w-screen h-screen bg-base-100 z-50"
 		out:fade={{ duration: 1000 }}
