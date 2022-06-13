@@ -1,31 +1,21 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadStarsPreset } from 'tsparticles-preset-stars';
-	// import type { ParticlesProps } from 'svelte-particles';
 	import type { Engine } from 'tsparticles-engine';
 	import type { SvelteComponent } from 'svelte/internal';
 
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
-	import { waitFor } from '$lib/stores/preloader';
 
 	let ParticlesComponent: SvelteComponent;
 
 	onMount(async () => {
-		const module = await waitFor(import('svelte-particles'));
+		const module = await import('svelte-particles');
 		ParticlesComponent = module.default as any;
 	});
 
-	// const particlesConfig: ParticlesProps['options'] = {
-	// 	preset: 'stars',
-	// 	background: { color: 'transparent' },
-	// 	style: {
-	// 		position: 'static',
-	// 	},
-	// };
-
 	const particlesInit = async (main: Engine) => {
-		await waitFor(loadStarsPreset(main));
+		await loadStarsPreset(main);
 	};
 
 	const particlesOptions = {
@@ -119,12 +109,12 @@
 
 <!-- TODO: Tailwind needs rework -->
 <section class="bg-white flex flex-wrap justify-center" style="height: 500px">
-		<div class='max-w-6xl flex flex-wrap justify-between'>
-			<img class='h-20' src='assets/partners/wondry.png' alt='wondry'/>
-			<img class='h-20' src='assets/partners/c4e.jpg' alt='c4e'/>
-			<img class='h-20' src='assets/partners/sasb.png' alt='sasb'/>
-			<img class='h-20' src='assets/partners/unpri.png' alt='unpri'/>
-		</div>
+	<div class="max-w-6xl flex flex-wrap justify-between">
+		<img class="h-20" src="assets/partners/wondry.png" alt="wondry" />
+		<img class="h-20" src="assets/partners/c4e.jpg" alt="c4e" />
+		<img class="h-20" src="assets/partners/sasb.png" alt="sasb" />
+		<img class="h-20" src="assets/partners/unpri.png" alt="unpri" />
+	</div>
 </section>
 
 <section class="text-black" style="height: 500px; background-color: salmon">
