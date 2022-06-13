@@ -133,7 +133,7 @@
 					bumpScale: 0.05,
 					envMap,
 					envMapIntensity: 0.4,
-					sheen: 1,
+					sheen: 0.5,
 					sheenRoughness: 0.75,
 					sheenColor: new Color('#ff8a00').convertSRGBToLinear(),
 					clearcoat: 0.5,
@@ -379,5 +379,5 @@
 	style="width: {width}px; height: {height}px;"
 	class="overflow-hidden max-w-full flex items-center justify-center"
 >
-	<canvas bind:this={canvas} class="max-w-full" use:onClickOnly={toggleDayTime} />
+	<canvas bind:this={canvas} class="max-w-full z-10" use:onClickOnly={toggleDayTime} />
 </div>

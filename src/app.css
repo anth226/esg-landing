@@ -7,11 +7,6 @@ body,
 #root {
 	@apply h-full;
 }
-/* Changing Primary Button Style */
-[data-theme="esgi"] .btn-primary {
-	border-width: 2px;
-	color: white;
-	background-color: hsl(var(--p));}
 
 /* Scroll */
 ::-webkit-scrollbar {
