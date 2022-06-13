@@ -91,6 +91,7 @@
 		const controls = new OrbitControls(camera, renderer.domElement);
 		controls.target.set(0, 0, 0);
 		controls.enableZoom = false;
+		controls.enablePan = false;
 		controls.dampingFactor = 0.05;
 		controls.enableDamping = true;
 
