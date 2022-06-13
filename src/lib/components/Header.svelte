@@ -22,8 +22,13 @@
 			</ul>
 		</div>
 		<div class="flex gap-3">
-			<a href='https://app.esgi.io/auth/registration' class="btn btn-sm hidden lg:inline-flex btn-outline-gray-300">Sign Up</a>
-			<a href='https://app.esgi.io/auth/login' class="btn btn-sm hidden lg:inline-flex btn-primary">Sign In</a>
+			<a
+				href="https://app.esgi.io/auth/registration"
+				class="btn btn-sm btn-outline hidden lg:inline-flex">Sign Up</a
+			>
+			<a href="https://app.esgi.io/auth/login" class="btn btn-sm hidden lg:inline-flex btn-primary"
+				>Sign In</a
+			>
 			<div class="dropdown dropdown-end">
 				<button tabindex="0" class="btn btn-ghost lg:hidden">
 					<svg
