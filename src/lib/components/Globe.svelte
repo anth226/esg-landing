@@ -28,7 +28,8 @@
 		type Event,
 	} from 'three';
 	import { RGBELoader, OrbitControls, GLTFLoader } from 'three-stdlib';
-	import anime from 'animejs';
+	import { tweened } from 'svelte/motion';
+	import { sineInOut } from 'svelte/easing';
 
 	import { onClickOnly } from '$lib/actions/onClickOnly';
 
@@ -42,7 +43,19 @@
 	let canvas: HTMLCanvasElement;
 	let globeReady = false;
 
-	let toggleDayTime = (e: MouseEvent) => {};
+	let isDay = true;
+	const dayAnimationTime = tweened(isDay ? 0 : 1, {
+		duration: 500,
+		easing: sineInOut,
+	});
+	$: $dayAnimationTime = isDay ? 0 : 1;
+
+	let dayAnimationUpdate = (t: number) => {};
+	$: dayAnimationUpdate($dayAnimationTime);
+
+	let toggleDayTime = () => {
+		isDay = !isDay;
+	};
 
 	onMount(() => {
 		const scene = new Scene();
@@ -204,49 +217,30 @@
 
 			let daytime = true;
 			let animating = false;
-			toggleDayTime = (e) => {
-				if (animating) return;
+			dayAnimationUpdate = (t) => {
+				sunLight.intensity = 3.5 * (1 - t);
+				moonLight.intensity = 3.5 * t;
 
-				const anim = daytime ? [0, 1] : [1, 0];
-				animating = true;
+				sunLight.position.setY(20 * (1 - t));
+				moonLight.position.setY(20 * t);
 
-				let obj = { t: 0 };
-				anime({
-					targets: obj,
-					t: anim,
-					complete: () => {
-						animating = false;
-						daytime = !daytime;
-					},
-					update: () => {
-						sunLight.intensity = 3.5 * (1 - obj.t);
-						moonLight.intensity = 3.5 * obj.t;
+				sphere.material.sheen = 1 - t;
+				scene.children.forEach((child) => {
+					child.traverse((object) => {
+						if (object instanceof Mesh && object.material.envMap) {
+							object.material.envMapIntensity =
+								object.userData.sunEnvIntensity * (1 - t) + object.userData.moonEnvIntensity * t;
+						}
+					});
+				});
 
-						sunLight.position.setY(20 * (1 - obj.t));
-						moonLight.position.setY(20 * obj.t);
-
-						sphere.material.sheen = 1 - obj.t;
-						scene.children.forEach((child) => {
-							child.traverse((object) => {
-								if (object instanceof Mesh && object.material.envMap) {
-									object.material.envMapIntensity =
-										object.userData.sunEnvIntensity * (1 - obj.t) +
-										object.userData.moonEnvIntensity * obj.t;
-								}
-							});
-						});
-
-						ringsScene.children.forEach((child, i) => {
-							child.traverse((object) => {
-								if (object instanceof Mesh) {
-									object.material.opacity =
-										object.userData.sunOpacity * (1 - obj.t) + object.userData.moonOpacity * obj.t;
-								}
-							});
-						});
-					},
-					easing: 'easeInOutSine',
-					duration: 500,
+				ringsScene.children.forEach((child, i) => {
+					child.traverse((object) => {
+						if (object instanceof Mesh) {
+							object.material.opacity =
+								object.userData.sunOpacity * (1 - t) + object.userData.moonOpacity * t;
+						}
+					});
 				});
 			};
 			let clock = new Clock();
