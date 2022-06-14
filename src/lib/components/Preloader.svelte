@@ -17,8 +17,13 @@
 		class="grid place-items-center fixed w-screen h-screen bg-base-100 z-50"
 		out:fade={{ duration: 1000 }}
 	>
-		<div
-			class="w-[100px] h-[100px] absolute bg-no-repeat bg-center bg-[url(/assets/esgi-navy-loader.gif)]"
+		<video
+			src="/assets/esgi-navy-loader.mp4"
+			autoplay
+			loop
+			muted
+			playsinline
+			class="w-[100px] h-[100px]"
 		/>
 	</div>
 {/if}
