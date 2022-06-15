@@ -15,7 +15,6 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
-		"@types/animejs": "^3.1.4",
 		"@types/three": "^0.141.0",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
@@ -36,12 +35,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/poppins": "^4.5.8",
-		"animejs": "^3.2.1",
 		"daisyui": "^2.15.2",
-		"svelte-particles": "^2.0.6",
 		"three": "^0.141.0",
-		"three-stdlib": "^2.10.2",
-		"tsparticles-engine": "^2.0.6",
-		"tsparticles-preset-stars": "^2.0.6"
+		"three-stdlib": "^2.10.2"
 	}
 }
