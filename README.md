@@ -1,10 +1,10 @@
 Site looks FANTASTIC so far. Really love this.
 
-## 1.
+## 1. ✅
 
 Remove the right click drag on the globe.
 
-## 2.
+## 2. ✅
 
 I apologize for not being clear before. Let's keep the fallback image for the globe & have the preloader. The preloader will be a set # of seconds rather than an await function. Right now the preloader gif is choppy, hopefully this will fix that issue.
 
