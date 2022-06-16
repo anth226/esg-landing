@@ -53,19 +53,26 @@
 	>
 </section>
 
-<!-- TODO: Tailwind needs rework -->
-<section class="bg-white flex flex-wrap justify-center" style="height: 500px">
-	<div class="max-w-6xl flex flex-wrap justify-between">
-		<img class="h-20" src="assets/partners/wondry.png" alt="wondry" />
-		<img class="h-20" src="assets/partners/c4e.jpg" alt="c4e" />
-		<img class="h-20" src="assets/partners/sasb.png" alt="sasb" />
-		<img class="h-20" src="assets/partners/unpri.png" alt="unpri" />
+<section class="bg-white flex flex-wrap justify-center" style="height: 200px">
+	<div class="max-w-6xl flex flex-wrap gap-20">
+		<img class="h-20 grayscale" src="assets/partners/wondry.png" alt="wondry" />
+		<img class="h-20 grayscale" src="assets/partners/c4e.jpg" alt="c4e" />
+		<img class="h-20 grayscale" src="assets/partners/sasb.png" alt="sasb" />
+		<img class="h-20 grayscale" src="assets/partners/sdgs.webp" alt="sdgs" />
+		<img class="h-12 grayscale" src="assets/partners/unpri.png" alt="unpri" />
 	</div>
 </section>
 
-<section class="text-black" style="height: 500px; background-color: salmon">
-	Another section here - screenshot demos (like monday.com)
+<section class="bg-white flex flex-wrap justify-center" style="height: 500px">
+	<div class='text-black'>Next section</div>
 </section>
+<section class="bg-base-100 flex flex-wrap justify-center" style="height: 500px">
+	<div class='text-white'>Next section</div>
+</section>
+<section class="bg-white flex flex-wrap justify-center" style="height: 500px">
+	<div class='text-black'>Next section</div>
+</section>
+
 
 <style lang="postcss">
 	.gradient-background {
