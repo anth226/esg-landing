@@ -12,13 +12,13 @@
 
 ## 3. Fade transition between all pages ✅
 
-## 4. Footer
+## 4. Footer ✅
 
 - static/examples/footer-example.png
 - from https://www.officespacesoftware.com/
 - Recreate this look (the top three grids, not the bottom illustration), and I can fill in the content
 
-## 5. Header / Pages
+## 5. Header / Pages ✅
 
 - Remove the Software page and add Homepage in it's place (which is the '/' or main page).
 - Add a css/ui change to the header so the user knows which page they are on. Just an underline or color change will do for now, I can play around with this on my own.

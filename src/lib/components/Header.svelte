@@ -1,6 +1,8 @@
 <script>
+	import { page } from '$app/stores';
+
 	const links = [
-		{ label: 'Software', href: '/software' },
+		{ label: 'Home', href: '/' },
 		{ label: 'Solutions', href: '/solutions' },
 		{ label: 'Pricing', href: '/pricing' },
 		{ label: 'About Us', href: '/about' },
@@ -17,7 +19,8 @@
 
 			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-lg">
 				{#each links as { label, href }}
-					<li><a {href}>{label}</a></li>
+					{@const active = $page.url.pathname === href}
+					<li><a {href} class:text-primary={active} class:underline={active}>{label}</a></li>
 				{/each}
 			</ul>
 		</div>
