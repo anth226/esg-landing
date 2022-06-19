@@ -5,7 +5,7 @@
 - Create the front-end for the section beneath the partner logos. (I sent the PDF mockup on slack)
 - I'd like the timeline on the left to be programmaticly done if possible. Showing from 2020 to 2030, 5 years at a time, 5 projects (add one more project than shown). The user could then drag through the timeline and lock/snap to a year. Use your best judgement here-- if you need a gantt or chart package / if it's too hard to do and an image would be better / if you have any UI/UX suggestions for it. I'm excited to see what you come up with.
 
-## 2. Pricing
+## 2. Pricing ✅
 
 - Add 4 new 'fund' cards on the toggle. Also add a transition that fits and change the gold/bold for the toggle label. I'll fill in the content
 - fix mobile compatibility
