@@ -48,31 +48,58 @@
 		fill="none"
 		preserveAspectRatio="none"
 		viewBox="0 0 1680 40"
-		class="w-full"
-		style="bottom: -1px;"><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" /></svg
+		class="w-full"><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" /></svg
 	>
 </section>
 
-<section class="bg-white flex flex-wrap justify-center" style="height: 200px">
-	<div class="max-w-6xl flex flex-wrap gap-20">
+<section class="bg-[url(/assets/earth.png)] text-base-200 px-2 bg-white">
+	<div class="max-w-6xl mx-auto flex flex-wrap gap-20 items-center mb-20">
 		<img class="h-20 grayscale" src="assets/partners/wondry.png" alt="wondry" />
 		<img class="h-20 grayscale" src="assets/partners/c4e.jpg" alt="c4e" />
 		<img class="h-20 grayscale" src="assets/partners/sasb.png" alt="sasb" />
 		<img class="h-20 grayscale" src="assets/partners/sdgs.webp" alt="sdgs" />
 		<img class="h-12 grayscale" src="assets/partners/unpri.png" alt="unpri" />
 	</div>
-</section>
 
+	<h2
+		class="text-center text-3xl font-bold underline decoration-primary underline-offset-[10px] decoration-2 mb-12"
+	>
+		ESG Roadmaps & Playbooks
+	</h2>
+	<div class="flex justify-between max-w-6xl m-auto">
+		<div>TODO: Slider here</div>
+		<div class="max-w-lg pb-12">
+			<div class="text-gray-400 font-sans">ESG Roadmaps & Playbooks</div>
+			<div class="text-3xl mb-12">
+				Understand your ESG Roadmap<br />
+				customized for your
+				<span class="text-primary underline text-decoration-primary">Sector</span>
+				&
+				<span class="text-primary underline text-decoration-primary">Size</span>
+			</div>
+			<p class="font-sans mb-12 max-w-sm">
+				ESG is a maze. Focus on your business; let us layout best-practices and guide you through
+				each and every one.
+			</p>
+			<div class="text-primary font-sans text-sm">
+				Compliance | ESG | Impact | Benchmarking | Roadmaps | Playbooks
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bg-base-100 flex flex-wrap justify-center">
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		preserveAspectRatio="none"
+		viewBox="0 0 1680 40"
+		class="w-full rotate-180"><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" /></svg
+	>
+	<div class="text-white pb-96">Next section</div>
+</section>
 <section class="bg-white flex flex-wrap justify-center" style="height: 500px">
-	<div class='text-black'>Next section</div>
+	<div class="text-black">Next section</div>
 </section>
-<section class="bg-base-100 flex flex-wrap justify-center" style="height: 500px">
-	<div class='text-white'>Next section</div>
-</section>
-<section class="bg-white flex flex-wrap justify-center" style="height: 500px">
-	<div class='text-black'>Next section</div>
-</section>
-
 
 <style lang="postcss">
 	.gradient-background {
