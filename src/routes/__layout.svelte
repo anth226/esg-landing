@@ -8,7 +8,7 @@
 	import '@fontsource/poppins';
 </script>
 
-<Preloader />
+<!-- <Preloader /> -->
 
 <div class="min-h-full flex flex-col">
 	<Header />
