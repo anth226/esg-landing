@@ -52,8 +52,10 @@
 	>
 </section>
 
-<section class="bg-[url(/assets/earth.png)] text-base-200 px-2 bg-white">
-	<div class="max-w-6xl mx-auto flex flex-wrap gap-20 items-center mb-20">
+<section
+	class="bg-[url(/assets/earth.png)] bg- bg-contain bg-center bg-no-repeat text-base-200 px-2 bg-white"
+>
+	<div class="max-w-6xl mx-auto flex flex-wrap gap-20 items-center justify-center mb-20">
 		<img class="h-20 grayscale" src="assets/partners/wondry.png" alt="wondry" />
 		<img class="h-20 grayscale" src="assets/partners/c4e.jpg" alt="c4e" />
 		<img class="h-20 grayscale" src="assets/partners/sasb.png" alt="sasb" />
