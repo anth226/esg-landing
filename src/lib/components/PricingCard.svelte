@@ -21,12 +21,10 @@
 		{/each}
 	</ul>
 	<button
-		class="w-full block text-base font-semibold border rounded-md text-center p-4 hover:text-white hover:bg-primary hover:border-primary transition"
+		class="w-full btn block text-base font-semibold border rounded-md text-center hover:text-white hover:bg-primary hover:border-primary transition"
 		class:text-primary={!btnHighlight}
 		class:bg-transparent={!btnHighlight}
 		class:border-[#D4DEFF]={!btnHighlight}
-		class:hover:bg-primary={!btnHighlight}
-		class:hover:border-primary={!btnHighlight}
 		class:text-white={btnHighlight}
 		class:bg-primary={btnHighlight}
 		class:border-primary={btnHighlight}
