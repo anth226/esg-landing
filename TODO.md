@@ -10,7 +10,7 @@
 - Add 4 new 'fund' cards on the toggle. Also add a transition that fits and change the gold/bold for the toggle label. I'll fill in the content
 - fix mobile compatibility
 
-## 3. Fade transition between all pages
+## 3. Fade transition between all pages ✅
 
 ## 4. Footer
 
