@@ -1,7 +1,11 @@
 <script>
 	import PricingCard from '$lib/components/PricingCard.svelte';
+	import Toggle from '$lib/components/Toggle.svelte';
+	import { fly } from 'svelte/transition';
 
 	let showFunds = false;
+	const gridClasses =
+		'grid grid-cols-[repeat(auto-fill,minmax(17rem,1fr))] grid-flow-row gap-4 mx-2 mb-10';
 </script>
 
 <section class="flex-1 flex flex-col relative bg-white">
@@ -22,7 +26,7 @@
 		</div>
 
 		<div class="flex flex-wrap w-full mb-16">
-			<label class="label mx-auto" for="pricing-fund-toggle">
+			<label class="mx-auto inline-flex items-center cursor-pointer" for="pricing-fund-toggle">
 				<div
 					class="mr-16 text-xl"
 					class:text-gray-400={showFunds}
@@ -31,16 +35,7 @@
 				>
 					Companies
 				</div>
-				<div class="toggle">
-					<input
-						class="toggle-state"
-						id="pricing-fund-toggle"
-						type="checkbox"
-						name="check"
-						bind:checked={showFunds}
-					/>
-					<div class="indicator" />
-				</div>
+				<Toggle bind:on={showFunds} id="pricing-fund-toggle" />
 				<div
 					class="ml-16 text-xl"
 					class:text-gray-400={!showFunds}
@@ -52,10 +47,12 @@
 			</label>
 		</div>
 
-		<div
-			class="grid grid-cols-[repeat(auto-fill,minmax(17rem,1fr))] grid-flow-row gap-4 mx-2 mb-10"
-		>
-			{#if showFunds}
+		{#if showFunds}
+			<div
+				class={gridClasses}
+				out:fly={{ duration: 500, x: 300 }}
+				in:fly={{ duration: 500, x: 300, delay: 200 }}
+			>
 				<PricingCard
 					title="Funds"
 					price="$999 / year"
@@ -112,7 +109,13 @@
 					]}
 					btnText="Choose Personal"
 				/>
-			{:else}
+			</div>
+		{:else}
+			<div
+				class={gridClasses}
+				out:fly={{ duration: 500, x: -300 }}
+				in:fly={{ duration: 500, x: -300, delay: 200 }}
+			>
 				<PricingCard
 					title="Start-up"
 					price="$999 / year"
@@ -126,7 +129,6 @@
 						'3 Months support',
 					]}
 					btnText="Choose Personal"
-					flyFromLeft
 				/>
 				<PricingCard
 					title="Growth Equity"
@@ -142,7 +144,6 @@
 					]}
 					btnText="Choose Business"
 					btnHighlight
-					flyFromLeft
 				/>
 				<PricingCard
 					title="Middle Market"
@@ -157,7 +158,6 @@
 						'12 Months support',
 					]}
 					btnText="Choose Professional"
-					flyFromLeft
 				/>
 				<PricingCard
 					title="Enterprise"
@@ -173,47 +173,8 @@
 					]}
 					btnText="Choose Business"
 					btnHighlight
-					flyFromLeft
 				/>
-			{/if}
-		</div>
+			</div>
+		{/if}
 	</div>
 </section>
-
-<style>
-	.label {
-		display: inline-flex;
-		align-items: center;
-		cursor: pointer;
-		color: #394a56;
-	}
-
-	.toggle {
-		isolation: isolate;
-		position: relative;
-		height: 34px;
-		width: 68px;
-		border-radius: 17px;
-		overflow: hidden;
-		box-shadow: -10px -5px 10px 0px #ffffff, 10px 5px 10px 0px #d1d9e6,
-			5px 5px 5px 0px #d1d9e6 inset, -5px -5px 5px 0px #ffffff inset;
-	}
-
-	.toggle-state {
-		display: none;
-	}
-
-	.indicator {
-		height: 100%;
-		width: 200%;
-		background: hsl(var(--p));
-		border-radius: 17px;
-		transform: translate3d(-75%, 0, 0);
-		transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-		box-shadow: -10px -5px 10px 0px #ffffff, 10px 5px 15px 0px #d1d9e6;
-	}
-
-	.toggle-state:checked ~ .indicator {
-		transform: translate3d(25%, 0, 0);
-	}
-</style>

@@ -1,20 +1,14 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
 	export let title: string;
 	export let price: string;
 	export let description: string;
 	export let features: string[];
 	export let btnText: string;
 	export let btnHighlight = false;
-	export let flyFromLeft = false;
-
-	$: flyDirection = flyFromLeft ? 1 : -1;
 </script>
 
 <div
 	class="bg-white rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12"
-	out:fly={{ duration: 500, x: flyDirection * 300 }}
-	in:fly={{ duration: 500, x: flyDirection * 300, delay: 200 }}
 >
 	<span class="text-primary font-semibold text-lg block mb-4">{title}</span>
 	<div class="font-bold text-base-100 mb-5 text-3xl">{price}</div>
