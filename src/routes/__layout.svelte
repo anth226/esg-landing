@@ -1,5 +1,4 @@
 <script>
-	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import Preloader from '$lib/components/Preloader.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -16,9 +15,7 @@
 <div class="min-h-full flex flex-col">
 	<Header />
 	<PageTransition key={$page.url.pathname}>
-		<main class="flex flex-col flex-grow" transition:fade>
-			<slot />
-		</main>
+		<slot />
 	</PageTransition>
 	<Footer />
 </div>
