@@ -58,6 +58,7 @@
 
 	const gapSize = 64;
 	const itemSize = 30;
+	const axisX = 135;
 
 	function scroll(items: number) {
 		ulElement.scrollBy({ left: items * (itemSize + gapSize), behavior: 'smooth' });
@@ -74,17 +75,17 @@
 		<button on:click={() => scroll(-1)} disabled={isFirst} class="disabled:invisible">&lt;</button>
 		<ul
 			class="flex gap-[64px] w-[26rem] overflow-x-scroll p-2 snap-x snap-mandatory relative z-10"
-			style="scrollbar-width: none;"
+			style="scrollbar-width: none; scroll-snap-type: mandatory;"
 			bind:this={ulElement}
 			use:onIntersectionChange={{
 				targets: targetNodes,
 				callback: onIntersect,
 			}}
 		>
-			<div />
+			<div class="snap-start" />
 			{#each data as item, idx}
 				<li
-					class="snap-center"
+					class:snap-start={idx !== data.length - 1}
 					class:text-white={item.year === selectedYear}
 					bind:this={targetNodes[idx]}
 				>
@@ -93,7 +94,7 @@
 					</button>
 				</li>
 			{/each}
-			<div class="snap-center" />
+			<div />
 			<div />
 			<div />
 		</ul>
@@ -102,14 +103,14 @@
 		<!-- circle -->
 		<div
 			class="w-12 h-12 bg-base-100 rounded-full absolute z-0"
-			style="transform: translateX(calc(140px - 50%));"
+			style="transform: translateX(calc({axisX}px - 50%));"
 		/>
 	</div>
 
 	<!-- vertical line -->
 	<div
 		class="w-1 h-96 bg-gradient-to-b from-base-100"
-		style="transform: translate(calc(140px - 50%), -15px);"
+		style="transform: translate(calc({axisX}px - 50%), -15px);"
 	/>
 
 	<!-- projects -->
@@ -120,7 +121,7 @@
 			class="absolute"
 			style="
 				top: {90 + idx * 70}px;
-				left: 140px;
+				left: {axisX}px;
 				transform: translateX({translateX});"
 			in:fly={{ x: flyDirection * 100, delay: 300, duration: 200 }}
 			out:fly={{ x: flyDirection * 100, duration: 200 }}
