@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
+	import TimeLine from '$lib/components/Timeline/TimeLine.svelte';
 </script>
 
 <svelte:head>
@@ -68,8 +69,10 @@
 	>
 		ESG Roadmaps & Playbooks
 	</h2>
-	<div class="flex justify-between max-w-6xl m-auto">
-		<div>TODO: Slider here</div>
+	<div class="flex flex-wrap justify-between items-center max-w-6xl m-auto">
+		<div class="overflow-hidden">
+			<TimeLine />
+		</div>
 		<div class="max-w-lg pb-12">
 			<div class="text-gray-400 font-sans">ESG Roadmaps & Playbooks</div>
 			<div class="text-3xl mb-12">
