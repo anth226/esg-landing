@@ -21,7 +21,7 @@ module.exports = {
 			addBase({
 				'@font-face': {
 					fontFamily: 'Garamond',
-					src: 'url("/assets/fonts/garamond-bold.woff") format("woff2")',
+					src: 'url("/assets/fonts/garamond-bold.woff2") format("woff2")',
 					fontWeight: 700,
 					fontDisplay: 'swap',
 					fontStyle: 'normal',
