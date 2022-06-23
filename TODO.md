@@ -13,7 +13,7 @@ slack.com
 One modal I found:
 https://tailwindui.com/components/application-ui/overlays/modals
 
-## 5. For the next section on the homepage, 'The ESG Impact Process', re-create the look on static/examples/example.png with the three clickable buttons on the left.
+## 5. For the next section on the homepage, 'The ESG Impact Process', re-create the look on static/examples/example.png with the five clickable buttons on the left.
 
 The example is from novisto.com
 
