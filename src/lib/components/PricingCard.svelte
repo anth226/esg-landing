@@ -11,11 +11,11 @@
 	class="bg-white rounded-xl relative z-10 overflow-hidden border border-primary border-opacity-20 py-10 px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12"
 >
 	<span class="text-primary font-semibold text-lg block mb-4">{title}</span>
-	<div class="font-bold text-base-100 mb-5 text-3xl">{price}</div>
-	<p class="text-base-100 text-body-color pb-8 mb-8 border-b border-[#F2F2F2] font-sans">
+	<div class="font-bold text-secondary mb-5 text-2xl">{price}</div>
+	<p class="text-secondary text-body-color pb-8 mb-8 border-b border-[#F2F2F2] font-sans">
 		{description}
 	</p>
-	<ul class="mb-7 text-base-100 text-body-color leading-loose flex flex-col gap-1">
+	<ul class="mb-7 text-secondary text-body-color leading-loose flex flex-col gap-1">
 		{#each features as feature}
 			<li>{feature}</li>
 		{/each}

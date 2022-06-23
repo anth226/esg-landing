@@ -1,24 +1,41 @@
-## Note: Im still finalizing the content so don't worry if some of the sentences look dumb haha.
+## Note: I changed the 'base-100' color to be #fff white and added the #113345 navy blue as 'secondary'
 
-## 1. Homepage
+## 1. Fix fading between pages. It could just be Svelte, or my dev environment, but clicking on a new page 1) instantly shows new page 2) fades 3) shows new page again. Instead of 1) fades 2) shows new page
 
-- Create the front-end for the section beneath the partner logos. (I sent the PDF mockup on slack)
-- I'd like the timeline on the left to be programmaticly done if possible. Showing from 2020 to 2030, 5 years at a time, 5 projects (add one more project than shown). The user could then drag through the timeline and lock/snap to a year. Use your best judgement here-- if you need a gantt or chart package / if it's too hard to do and an image would be better / if you have any UI/UX suggestions for it. I'm excited to see what you come up with.
+## 2. Fix weird scrolling issue on pricing-- when toggling companies and funds. The responsiveness of the height of the container div for the new cards coming in and out
 
-## 2. Pricing ✅
+## 3. Add a header that fades/tranlates in once your scroll past a certain px. An example of this animation is:
 
-- Add 4 new 'fund' cards on the toggle. Also add a transition that fits and change the gold/bold for the toggle label. I'll fill in the content
-- fix mobile compatibility
+slack.com
 
-## 3. Fade transition between all pages ✅
+## 4. Add a modal to each person's picture in About Us:
 
-## 4. Footer ✅
+One modal I found:
+https://tailwindui.com/components/application-ui/overlays/modals
 
-- static/examples/footer-example.png
-- from https://www.officespacesoftware.com/
-- Recreate this look (the top three grids, not the bottom illustration), and I can fill in the content
+## 5. For the next section on the homepage, 'The ESG Impact Process', re-create the look on static/examples/example.png with the three clickable buttons on the left.
 
-## 5. Header / Pages ✅
+The example is from novisto.com
 
-- Remove the Software page and add Homepage in it's place (which is the '/' or main page).
-- Add a css/ui change to the header so the user knows which page they are on. Just an underline or color change will do for now, I can play around with this on my own.
+I can transform the pictures to that perspective unless you know how to with the perscpective() css thing. Just use filler images for now and I can change them later.
+
+## 6. For the Timeline, have different projects throughout the various years at different translateX's. If it's easier to do, maybe have the projects move/snap along with the scroll? (instead of fade in/out)
+
+Here are some exmaple projects:
+
+ESG Baseline
+Procurement
+SOC 2 Certification
+Scope 1 & 2 GHG
+Scope 3 GHG
+DEI Policy
+Employee Handbook
+Fair Wage Analysis
+Hazardous Waste Policy
+Local Community Engagement
+Remote Working Policy
+Security Control Certification
+Disaster Rocovery Process
+Impact Analysis
+Benchmark Analysis
+Stakeholder Surveys

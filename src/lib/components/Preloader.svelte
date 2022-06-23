@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	const TIMEOUT_MS = 2000;
+	const TIMEOUT_MS = 1000;
 	let loading = true;
 
 	onMount(() => {
@@ -14,8 +14,8 @@
 
 {#if loading}
 	<div
-		class="grid place-items-center fixed w-screen h-screen bg-base-100 z-50"
-		out:fade={{ duration: 1000 }}
+		class="grid place-items-center fixed w-screen h-screen bg-secondary z-50"
+		out:fade={{ duration: 500 }}
 	>
 		<video
 			src="/assets/esgi-navy-loader.mp4"

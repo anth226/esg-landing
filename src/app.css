@@ -8,6 +8,15 @@ body,
 	@apply h-full;
 }
 
+::selection {
+	background: #fcf8e3;
+	/* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+	background: #fcf8e3;
+	/* Gecko Browsers */
+}
 /* Scroll */
 ::-webkit-scrollbar {
 	width: 10px;

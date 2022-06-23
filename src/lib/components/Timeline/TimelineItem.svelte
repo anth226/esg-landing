@@ -1,12 +1,12 @@
 <script lang="ts">
-	export let border: 'primary' | 'gray' | 'base' = 'gray';
+	export let border: 'primary' | 'gray' | 'secondary' = 'gray';
 </script>
 
 <div
 	class="flex items-center gap-10 w-max bg-white py-2 px-4 border-2 rounded-full font-sans shadow-2xl"
 	class:border-primary={border === 'primary'}
 	class:border-gray-400={border === 'gray'}
-	class:border-base-100={border === 'base'}
+	class:border-secondary={border === 'secondary'}
 >
 	<slot />
 	<svg
