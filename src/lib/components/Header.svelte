@@ -9,7 +9,7 @@
 	];
 </script>
 
-<nav class="navbar bg-base-200 text-white flex-none">
+<nav class="navbar bg-secondary-focus text-white flex-none">
 	<div class="flex flex-1 justify-between items-center max-w-6xl mx-auto">
 		<div class="flex items-center gap-3">
 			<a href="/" class="text-2xl flex items-center gap-2">
@@ -17,17 +17,21 @@
 				<span class="">ESG Impact</span>
 			</a>
 
-			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-lg">
+			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-lg ">
 				{#each links as { label, href }}
 					{@const active = $page.url.pathname === href}
-					<li><a {href} class:text-primary={active} class:underline={active}>{label}</a></li>
+					<li>
+						<a {href} class:text-primary={active} class="link-underline link-underline-transparent"
+							>{label}</a
+						>
+					</li>
 				{/each}
 			</ul>
 		</div>
 		<div class="flex gap-3">
 			<a
 				href="https://app.esgi.io/auth/registration"
-				class="btn btn-sm btn-outline hidden lg:inline-flex text-white hover:bg-white hover:text-base-100 hover:outline-white"
+				class="btn btn-sm btn-outline hidden lg:inline-flex text-white hover:bg-white hover:text-secondary hover:outline-white"
 				>Sign Up</a
 			>
 			<a
@@ -67,5 +71,23 @@
 	.menu-separated li:not(:first-child)::before {
 		content: ' ';
 		@apply w-[1px] h-4 bg-white relative top-[50%] translate-y-[-50%] translate-x-[-0.25rem];
+	}
+
+	.link-underline {
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 1px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size 0.5s ease-in-out;
+	}
+
+	.link-underline-transparent {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#b7824b, #b7824b);
+	}
+
+	.link-underline:hover {
+		background-size: 100% 1px;
+		background-position: 0 100%;
 	}
 </style>

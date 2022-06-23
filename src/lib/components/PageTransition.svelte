@@ -5,8 +5,8 @@
 
 {#key key}
 	<main
-		in:fade={{ duration: 500, delay: 500 }}
-		out:fade={{ duration: 500 }}
+		in:fade={{ duration: 250, delay: 250 }}
+		out:fade={{ duration: 250 }}
 		class="flex flex-col flex-grow"
 	>
 		<slot />

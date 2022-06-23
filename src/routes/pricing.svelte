@@ -8,17 +8,17 @@
 		'grid grid-cols-[repeat(auto-fill,minmax(17rem,1fr))] grid-flow-row gap-4 mx-2 mb-10';
 </script>
 
-<section class="flex-1 flex flex-col relative bg-white">
+<section class="flex-1 flex flex-col relative bg-[#F7F7F7]">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex flex-col mt-24">
 		<div class="flex flex-wrap">
 			<div class="w-full px-2">
 				<div class="text-center mx-auto lg:mb-20 max-w-[550px]">
 					<span class="font-semibold text-lg text-primary mb-2 block">Pricing Tables</span>
-					<h2 class="font-bold text-3xl text-base-100 mb-4">Simple & Transparent Pricing</h2>
-					<p class="text-base-100 font-sans">We're 20-30x less than consultants.</p>
-					<p class="text-base-100 font-sans">We're 10-20x less than other ESG solutions.</p>
+					<h2 class="font-bold text-3xl text-secondary mb-4">Simple & Transparent Pricing</h2>
+					<p class="text-secondary font-sans">We're 20-30x less than consultants.</p>
+					<p class="text-secondary font-sans">We're 10-20x less than other ESG solutions.</p>
 					<br />
-					<p class="text-base-100 font-sans">
+					<p class="text-secondary font-sans">
 						Oh yeah, and we deliver ∞ more value. #democratizeESG
 					</p>
 				</div>
@@ -50,13 +50,13 @@
 		{#if showFunds}
 			<div
 				class={gridClasses}
-				out:fly={{ duration: 500, x: 300 }}
-				in:fly={{ duration: 500, x: 300, delay: 200 }}
+				out:fly={{ duration: 250, x: 300 }}
+				in:fly={{ duration: 250, x: 300, delay: 500 }}
 			>
 				<PricingCard
 					title="Funds"
-					price="$999 / year"
-					description="From $0 to $1 MM in revenue."
+					price="$4,999 / year"
+					description="Less than $500 million in AUM."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -69,8 +69,8 @@
 				/>
 				<PricingCard
 					title="Funds"
-					price="$999 / year"
-					description="From $0 to $1 MM in revenue."
+					price="$9,999 / year"
+					description="From $500 million to $1 billion in AUM."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -83,8 +83,8 @@
 				/>
 				<PricingCard
 					title="Funds"
-					price="$999 / year"
-					description="From $0 to $1 MM in revenue."
+					price="$14,999 / year"
+					description="From $1 billion to $10 billion in AUM."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -97,8 +97,8 @@
 				/>
 				<PricingCard
 					title="Funds"
-					price="$999 / year"
-					description="From $0 to $1 MM in revenue."
+					price="$29,999 / year"
+					description="Over $10 billion in AUM."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -113,13 +113,13 @@
 		{:else}
 			<div
 				class={gridClasses}
-				out:fly={{ duration: 500, x: -300 }}
-				in:fly={{ duration: 500, x: -300, delay: 200 }}
+				out:fly={{ duration: 250, x: 300 }}
+				in:fly={{ duration: 250, x: 300, delay: 500 }}
 			>
 				<PricingCard
 					title="Start-up"
 					price="$999 / year"
-					description="From $0 to $1 MM in revenue."
+					description="From $0 to $1 million in revenue."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -133,7 +133,7 @@
 				<PricingCard
 					title="Growth Equity"
 					price="$4,999 / year"
-					description="From $1 to $50 MM in revenue."
+					description="From $1 to $50 million in revenue."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -148,7 +148,7 @@
 				<PricingCard
 					title="Middle Market"
 					price="$9,999 / year"
-					description="From $50 to $500 MM in revenue."
+					description="From $50 to $500 million in revenue."
 					features={[
 						'Unlimited Users',
 						'All UI components',
@@ -162,7 +162,7 @@
 				<PricingCard
 					title="Enterprise"
 					price="$19,999 / year"
-					description="From $500 and up in revenue."
+					description="From $500 million and up in revenue."
 					features={[
 						'Unlimited Users',
 						'All UI components',

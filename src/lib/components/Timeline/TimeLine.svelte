@@ -5,11 +5,11 @@
 	import { onIntersectionChange } from '$lib/actions/onIntersectionChange';
 	import TimelineItem from './TimelineItem.svelte';
 
-	const data = Array.from({ length: 11 }, (_, i) => ({
-		year: 2020 + i,
+	const data = Array.from({ length: 7 }, (_, i) => ({
+		year: 2022 + i,
 		projects: [
 			`DEI Policy`,
-			'Supply Chain Procurement',
+			'Procurement',
 			'Scope 3 GHG',
 			'Responsive Design',
 			`Svelte Kit ${i + 1}.0`,
@@ -19,7 +19,7 @@
 	const projectDisplayConfig = [
 		{ border: 'primary' as const, translateX: '-60%' },
 		{ border: 'gray' as const, translateX: '-20%' },
-		{ border: 'base' as const, translateX: '50%' },
+		{ border: 'secondary' as const, translateX: '50%' },
 		{ border: 'gray' as const, translateX: '-50%' },
 		{ border: 'primary' as const, translateX: '-50%' },
 	];
@@ -102,14 +102,14 @@
 
 		<!-- circle -->
 		<div
-			class="w-12 h-12 bg-base-100 rounded-full absolute z-0"
+			class="w-12 h-12 bg-secondary rounded-full absolute z-0"
 			style="transform: translateX(calc({axisX}px - 50%));"
 		/>
 	</div>
 
 	<!-- vertical line -->
 	<div
-		class="w-1 h-96 bg-gradient-to-b from-base-100"
+		class="w-1 h-96 bg-gradient-to-b from-secondary"
 		style="transform: translate(calc({axisX}px - 50%), -15px);"
 	/>
 
@@ -118,12 +118,12 @@
 		{@const translateX = projectDisplayConfig[idx]?.translateX ?? '-50%'}
 		{@const flyDirection = parseInt(translateX) >= -50 ? 1 : -1}
 		<div
-			class="absolute"
+			class="absolute text-gray-600 hover:text-primary "
 			style="
 				top: {90 + idx * 70}px;
 				left: {axisX}px;
 				transform: translateX({translateX});"
-			in:fly={{ x: flyDirection * 100, delay: 300, duration: 200 }}
+			in:fly={{ x: flyDirection * 100, delay: 200, duration: 200 }}
 			out:fly={{ x: flyDirection * 100, duration: 200 }}
 		>
 			<TimelineItem border={projectDisplayConfig[idx].border}>{project}</TimelineItem>

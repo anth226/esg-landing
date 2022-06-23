@@ -34,8 +34,9 @@ module.exports = {
 			{
 				esgi: {
 					primary: '#B7824B',
-					'base-100': '#113345',
-					'base-200': '#0b212d',
+					secondary: '#113345',
+					'base-100': '#fff',
+					'secondary-focus': '#0b212d',
 					fontFamily: 'Garamond, EB Garamond, serif',
 					'.font-sans': {
 						fontFamily: 'Poppins, sans-serif',
