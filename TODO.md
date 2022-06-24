@@ -8,7 +8,7 @@
 
 slack.com
 
-## 4. Add a modal to each person's picture in About Us:
+## 4. ✅ Add a modal to each person's picture in About Us:
 
 One modal I found:
 https://tailwindui.com/components/application-ui/overlays/modals

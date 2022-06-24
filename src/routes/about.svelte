@@ -1,3 +1,63 @@
+<script lang="ts">
+	const team = [
+		{
+			name: 'Adam Jace',
+			role: 'Co-Founder / Product & Execution',
+			image: '/assets/profiles/adam.png',
+		},
+		{
+			name: 'Max Mona',
+			role: 'Co-Founder / Business Development',
+			image: '/assets/profiles/max.png',
+		},
+		{
+			name: 'Anna Ward',
+			role: 'VP of ESG',
+			image: '/assets/profiles/profile3.jpg',
+		},
+		{
+			name: 'Stanley Ho',
+			role: 'ESG Analyst',
+			image: '/assets/profiles/profile1.jpg',
+		},
+		{
+			name: 'Blake Broadnax',
+			role: 'ESG Analyst',
+			image: '/assets/profiles/profile2.jpg',
+		},
+		{
+			name: 'Chris Ma',
+			role: 'Software Engineer',
+			image: '/assets/profiles/chris.png',
+		},
+		{
+			name: 'Stas Gagarin',
+			role: 'Software Engineer',
+			image: '/assets/profiles/profile1.jpg',
+		},
+		{
+			name: 'Linda Isaacson',
+			role: 'Commercial Real Estate Advisor',
+			image: '/assets/profiles/linda.png',
+		},
+		{
+			name: 'Mark Cohen',
+			role: 'ESG Advisor',
+			image: '/assets/profiles/mark.png',
+		},
+		{
+			name: 'Tony Jace',
+			role: 'Business Advisor',
+			image: '/assets/profiles/profile1.jpg',
+		},
+		{
+			name: 'Thomas Burke',
+			role: 'Business Development Advisor',
+			image: '/assets/profiles/profile2.jpg',
+		},
+	];
+</script>
+
 <section class="text-black bg-white">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex-col justify-center">
 		<div class="grid grid-cols-8 gap-3">
@@ -64,138 +124,34 @@
 		</div>
 
 		<div class="grid grid-cols-4 gap-8 mt-8">
-			<div class="relative">
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile1.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Adam Jace</div>
-				<div class="text-gray-600 text-md">Co-Founder / Product & Execution</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile2.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Max Mona</div>
-				<div class="text-gray-600 text-md">Co-Founder / Business Development</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile3.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Anna Ward</div>
-				<div class="text-gray-600 text-md">VP of ESG</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile1.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Stanley Ho</div>
-				<div class="text-gray-600 text-md">ESG Analyst</div>
-			</div>
-			<div class="">
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile2.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Blake Broadnax</div>
-				<div class="text-gray-600 text-md">ESG Analyst</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile3.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Chris Ma</div>
-				<div class="text-gray-600 text-md">Software Engineer</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile1.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Stas Gagarin</div>
-				<div class="text-gray-600 text-md">Software Engineer</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile2.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Linda Isaacson</div>
-				<div class="text-gray-600 text-md">Commercial Real Estate Advisor</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile3.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Mark Cohen</div>
-				<div class="text-gray-600 text-md">ESG Advisor</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile1.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Tony Jace</div>
-				<div class="text-gray-600 text-md">Business Advisor</div>
-			</div>
-			<div>
-				<div class="bg-secondary h-6 w-6 z-10 absolute" />
-				<div class="bg-secondary rounded-xl">
-					<img
-						alt="profile"
-						src="/assets/profiles/profile2.jpg"
-						class="hover:cursor-pointer rounded-xl hover:opacity-75"
-					/>
-				</div>
-				<div class="text-secondary text-xl mt-2 font-bold">Thomas Burke</div>
-				<div class="text-gray-600 text-md">Business Development Advisor</div>
-			</div>
+			{#each team as { name, role, image }, idx}
+				<label for="team-modal-{idx}" class="modal-button">
+					<div class="bg-secondary h-6 w-6 z-10 absolute" />
+					<div class="bg-secondary rounded-xl">
+						<img alt={name} src={image} class="hover:cursor-pointer rounded-xl hover:opacity-75" />
+					</div>
+					<div class="text-secondary text-xl mt-2 font-bold">{name}</div>
+					<div class="text-gray-600 text-md">{role}</div>
+				</label>
+
+				<input type="checkbox" id="team-modal-{idx}" class="modal-toggle" />
+				<label for="team-modal-{idx}" class="modal cursor-pointer">
+					<label class="modal-box relative w-11/12 max-w-5xl" for="">
+						<h3 class="text-lg font-bold">{name}</h3>
+						{role}
+						<div class="py-4">
+							<img src={image} alt={name} width="400" height="400" class="float-left mr-4" />
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate reiciendis
+								architecto ipsam. Eveniet expedita quibusdam in. Repellendus quia, perferendis vel
+								tempore fuga nisi facere. Illum sapiente laboriosam deleniti nesciunt autem.
+								Assumenda enim, omnis ducimus accusamus optio eligendi, illum nemo vel laborum
+								repellendus ea earum exercitationem distinctio. Molestiae aliquid saepe et!
+							</p>
+						</div>
+					</label>
+				</label>
+			{/each}
 		</div>
 	</div>
 </section>
