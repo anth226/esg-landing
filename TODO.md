@@ -4,7 +4,7 @@
 
 ## 2. ✅ Fix weird scrolling issue on pricing-- when toggling companies and funds. The responsiveness of the height of the container div for the new cards coming in and out
 
-## 3. Add a header that fades/tranlates in once your scroll past a certain px. An example of this animation is:
+## 3. ✅ Add a header that fades/tranlates in once your scroll past a certain px. An example of this animation is:
 
 slack.com
 
