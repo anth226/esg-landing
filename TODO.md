@@ -1,6 +1,6 @@
 ## Note: I changed the 'base-100' color to be #fff white and added the #113345 navy blue as 'secondary'
 
-## 1. Fix fading between pages. It could just be Svelte, or my dev environment, but clicking on a new page 1) instantly shows new page 2) fades 3) shows new page again. Instead of 1) fades 2) shows new page
+## ✅ 1. Fix fading between pages. It could just be Svelte, or my dev environment, but clicking on a new page 1) instantly shows new page 2) fades 3) shows new page again. Instead of 1) fades 2) shows new page
 
 ## 2. Fix weird scrolling issue on pricing-- when toggling companies and funds. The responsiveness of the height of the container div for the new cards coming in and out
 
