@@ -2,6 +2,7 @@
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import Timeline from '$lib/components/Timeline/Timeline.svelte';
+	import AboutThePlatform from './_index/AboutThePlatform.svelte';
 </script>
 
 <svelte:head>
@@ -33,7 +34,7 @@
 					<button class="btn font-sans glass">Schedule a Demo</button>
 				</div>
 			</div>
-			<Globe />
+			<!-- <Globe /> -->
 		</div>
 
 		<hr class="divider my-0 mb-6 border-gray-300 border-1 opacity-50" />
@@ -110,55 +111,8 @@
 		<img src="assets/example.png" class="h-[350px]" />
 	</div>
 </section> -->
-<section class="text-secondary bg-[#F7F7F7]">
-	<div class="items-center max-w-6xl m-auto">
-		<div class="text-center mt-24 max-w-2xl m-auto">
-			<div class="text-gray-400 font-sans">About the Platform</div>
-			<div class="text-3xl mb-6 text-secondary font-bold">The ESG Impact Process</div>
-			<p class="font-sans mb-6 text-secondary ">
-				Our flagship process takes ~3 hours and guides your company or fund through qualitative and
-				quantitative assessments. The end result is an ESG rating, report, and recommended projects.
-			</p>
-			<p class="font-sans mb-6 text-secondary">
-				The <span class="text-primary underline">next steps</span> are on your own time and discretion.
-			</p>
-		</div>
+<AboutThePlatform />
 
-		<div class="grid grid-cols-2 my-24 gap-[120px]">
-			<div class="text-black grid grid-rows-5 gap-4 col-span-1">
-				<div class="flex flex-row">
-					<div class="pre-gold w-[300px]">
-						<span class="text-xl ml-3 mt-1">Sign Up</span>
-						<!-- <p class="text-md text-gray-600 font-sans ml-3 mt-1">10 Minutes</p> -->
-					</div>
-				</div>
-
-				<div class="flex flex-row">
-					<div class="">
-						<div class="text-xl ml-3 mt-1">Materiality</div>
-						<!-- <div class="text-md text-gray-600 font-sans ml-3 mt-1">30 Minutes</div> -->
-					</div>
-				</div>
-
-				<div class="">
-					<div class="text-xl ml-3 mt-1">ESG Assessment</div>
-					<!-- <div class="text-md text-gray-600 font-sans ml-3 mt-1">90 Minutes</div> -->
-				</div>
-				<div class="">
-					<div class="text-xl ml-3 mt-1">Analyst Call</div>
-					<!-- <div class="text-md text-gray-600 font-sans ml-3 mt-1">60 Minutes</div> -->
-				</div>
-				<div class="flex flex-row">
-					<div class="w-[200px]">
-						<div class="text-xl ml-3 mt-1">Next Steps</div>
-						<!-- <div class="text-md text-gray-600 font-sans ml-3 mt-1">Discretionary</div> -->
-					</div>
-				</div>
-			</div>
-			<div class="">Screenshots here</div>
-		</div>
-	</div>
-</section>
 <section>asfd</section>
 
 <!-- <section class="bg-secondary flex flex-wrap justify-center">
@@ -175,27 +129,5 @@
 	.gradient-background {
 		background: url('/assets/particles.png'),
 			linear-gradient(225deg, #86b6c2 10%, rgba(17, 51, 69, 1) 40%);
-	}
-	.pre-gold {
-		background: #b7824b25;
-		border-left: 3px solid hsl(var(--p));
-		page-break-inside: avoid;
-		display: block;
-		word-wrap: break-word;
-	}
-
-	.pre-navy {
-		background: #11334525;
-		border-left: 3px solid hsl(var(--s));
-		page-break-inside: avoid;
-		display: block;
-		word-wrap: break-word;
-	}
-	.pre-gray {
-		background: #aeaeae25;
-		/* border-left: 3px solid #aeaeaeae; */
-		page-break-inside: avoid;
-		display: block;
-		word-wrap: break-word;
 	}
 </style>
