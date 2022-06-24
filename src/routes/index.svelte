@@ -34,7 +34,7 @@
 					<button class="btn font-sans glass">Schedule a Demo</button>
 				</div>
 			</div>
-			<!-- <Globe /> -->
+			<Globe />
 		</div>
 
 		<hr class="divider my-0 mb-6 border-gray-300 border-1 opacity-50" />
