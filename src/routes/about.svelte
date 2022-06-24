@@ -65,7 +65,7 @@
 
 		<div class="grid grid-cols-4 gap-8 mt-8">
 			<div class="relative">
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -77,7 +77,7 @@
 				<div class="text-gray-600 text-md">Co-Founder / Product & Execution</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -89,7 +89,7 @@
 				<div class="text-gray-600 text-md">Co-Founder / Business Development</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -101,7 +101,7 @@
 				<div class="text-gray-600 text-md">VP of ESG</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -113,7 +113,7 @@
 				<div class="text-gray-600 text-md">ESG Analyst</div>
 			</div>
 			<div class="">
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -125,7 +125,7 @@
 				<div class="text-gray-600 text-md">ESG Analyst</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -137,7 +137,7 @@
 				<div class="text-gray-600 text-md">Software Engineer</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -149,7 +149,7 @@
 				<div class="text-gray-600 text-md">Software Engineer</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -161,7 +161,7 @@
 				<div class="text-gray-600 text-md">Commercial Real Estate Advisor</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -173,7 +173,7 @@
 				<div class="text-gray-600 text-md">ESG Advisor</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
@@ -185,7 +185,7 @@
 				<div class="text-gray-600 text-md">Business Advisor</div>
 			</div>
 			<div>
-				<div class="bg-secondary h-6 w-6 z-50 absolute" />
+				<div class="bg-secondary h-6 w-6 z-10 absolute" />
 				<div class="bg-secondary rounded-xl">
 					<img
 						alt="profile"
