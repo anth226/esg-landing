@@ -5,7 +5,7 @@
 
 	let showFunds = false;
 	const gridClasses =
-		'grid grid-cols-[repeat(auto-fill,minmax(17rem,1fr))] grid-flow-row gap-4 mx-2 mb-10';
+		'grid grid-cols-[repeat(auto-fill,minmax(17rem,1fr))] grid-flow-row gap-4 mx-2 mb-10 col-start-1 col-end-2 row-start-1 row-end-2';
 </script>
 
 <section class="flex-1 flex flex-col relative bg-[#F7F7F7]">
@@ -47,134 +47,136 @@
 			</label>
 		</div>
 
-		{#if showFunds}
-			<div
-				class={gridClasses}
-				out:fly={{ duration: 250, x: 300 }}
-				in:fly={{ duration: 250, x: 300, delay: 500 }}
-			>
-				<PricingCard
-					title="Funds"
-					price="$4,999 / year"
-					description="Less than $500 million in AUM."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 1 (one) project',
-						'3 Months support',
-					]}
-					btnText="Choose Personal"
-				/>
-				<PricingCard
-					title="Funds"
-					price="$9,999 / year"
-					description="From $500 million to $1 billion in AUM."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 1 (one) project',
-						'3 Months support',
-					]}
-					btnText="Choose Personal"
-				/>
-				<PricingCard
-					title="Funds"
-					price="$14,999 / year"
-					description="From $1 billion to $10 billion in AUM."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 1 (one) project',
-						'3 Months support',
-					]}
-					btnText="Choose Personal"
-				/>
-				<PricingCard
-					title="Funds"
-					price="$29,999 / year"
-					description="Over $10 billion in AUM."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 1 (one) project',
-						'3 Months support',
-					]}
-					btnText="Choose Personal"
-				/>
-			</div>
-		{:else}
-			<div
-				class={gridClasses}
-				out:fly={{ duration: 250, x: 300 }}
-				in:fly={{ duration: 250, x: 300, delay: 500 }}
-			>
-				<PricingCard
-					title="Start-up"
-					price="$999 / year"
-					description="From $0 to $1 million in revenue."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 1 (one) project',
-						'3 Months support',
-					]}
-					btnText="Choose Personal"
-				/>
-				<PricingCard
-					title="Growth Equity"
-					price="$4,999 / year"
-					description="From $1 to $50 million in revenue."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 3 (Three) project',
-						'4 Months support',
-					]}
-					btnText="Choose Business"
-					btnHighlight
-				/>
-				<PricingCard
-					title="Middle Market"
-					price="$9,999 / year"
-					description="From $50 to $500 million in revenue."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on Unlimited project',
-						'12 Months support',
-					]}
-					btnText="Choose Professional"
-				/>
-				<PricingCard
-					title="Enterprise"
-					price="$19,999 / year"
-					description="From $500 million and up in revenue."
-					features={[
-						'Unlimited Users',
-						'All UI components',
-						'Lifetime access',
-						'Free updates',
-						'Use on 3 (Three) project',
-						'4 Months support',
-					]}
-					btnText="Choose Business"
-					btnHighlight
-				/>
-			</div>
-		{/if}
+		<div class="grid grid-cols-1 grid-rows-1 overflow-hidden">
+			{#if showFunds}
+				<div
+					class={gridClasses}
+					out:fly={{ duration: 250, x: 300 }}
+					in:fly={{ duration: 250, x: 300, delay: 500 }}
+				>
+					<PricingCard
+						title="Funds"
+						price="$4,999 / year"
+						description="Less than $500 million in AUM."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 1 (one) project',
+							'3 Months support',
+						]}
+						btnText="Choose Personal"
+					/>
+					<PricingCard
+						title="Funds"
+						price="$9,999 / year"
+						description="From $500 million to $1 billion in AUM."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 1 (one) project',
+							'3 Months support',
+						]}
+						btnText="Choose Personal"
+					/>
+					<PricingCard
+						title="Funds"
+						price="$14,999 / year"
+						description="From $1 billion to $10 billion in AUM."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 1 (one) project',
+							'3 Months support',
+						]}
+						btnText="Choose Personal"
+					/>
+					<PricingCard
+						title="Funds"
+						price="$29,999 / year"
+						description="Over $10 billion in AUM."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 1 (one) project',
+							'3 Months support',
+						]}
+						btnText="Choose Personal"
+					/>
+				</div>
+			{:else}
+				<div
+					class={gridClasses}
+					out:fly={{ duration: 250, x: -300 }}
+					in:fly={{ duration: 250, x: -300, delay: 500 }}
+				>
+					<PricingCard
+						title="Start-up"
+						price="$999 / year"
+						description="From $0 to $1 million in revenue."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 1 (one) project',
+							'3 Months support',
+						]}
+						btnText="Choose Personal"
+					/>
+					<PricingCard
+						title="Growth Equity"
+						price="$4,999 / year"
+						description="From $1 to $50 million in revenue."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 3 (Three) project',
+							'4 Months support',
+						]}
+						btnText="Choose Business"
+						btnHighlight
+					/>
+					<PricingCard
+						title="Middle Market"
+						price="$9,999 / year"
+						description="From $50 to $500 million in revenue."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on Unlimited project',
+							'12 Months support',
+						]}
+						btnText="Choose Professional"
+					/>
+					<PricingCard
+						title="Enterprise"
+						price="$19,999 / year"
+						description="From $500 million and up in revenue."
+						features={[
+							'Unlimited Users',
+							'All UI components',
+							'Lifetime access',
+							'Free updates',
+							'Use on 3 (Three) project',
+							'4 Months support',
+						]}
+						btnText="Choose Business"
+						btnHighlight
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
