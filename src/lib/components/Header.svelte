@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 
 	const links = [
@@ -7,9 +7,17 @@
 		{ label: 'Pricing', href: '/pricing' },
 		{ label: 'About Us', href: '/about' },
 	];
+	let scrollY: number;
+	$: fixed = scrollY > 64;
 </script>
 
-<nav class="navbar bg-secondary-focus text-white flex-none">
+<svelte:window bind:scrollY />
+
+<nav
+	class="navbar bg-secondary-focus text-white flex-none h-16 z-30"
+	class:absolute={!fixed}
+	class:fixed
+>
 	<div class="flex flex-1 justify-between items-center max-w-6xl mx-auto">
 		<div class="flex items-center gap-3">
 			<a href="/" class="text-2xl flex items-center gap-2">
@@ -89,5 +97,18 @@
 	.link-underline:hover {
 		background-size: 100% 1px;
 		background-position: 0 100%;
+	}
+
+	@keyframes slide-down {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+
+	nav.fixed {
+		animation: slide-down 0.3s ease-in-out;
 	}
 </style>

@@ -32,6 +32,8 @@
 
 	onMount(() => {
 		async function init() {
+			if (!canvas) return;
+
 			const THREE = await import('$lib/globe-three');
 			const scene = new THREE.Scene();
 			const ringsScene = new THREE.Scene();
