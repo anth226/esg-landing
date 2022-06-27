@@ -19,7 +19,7 @@ The example is from novisto.com
 
 I can transform the pictures to that perspective unless you know how to with the perscpective() css thing. Just use filler images for now and I can change them later.
 
-## 6. For the Timeline, have different projects throughout the various years at different translateX's. If it's easier to do, maybe have the projects move/snap along with the scroll? (instead of fade in/out)
+## 6. ✅ For the Timeline, have different projects throughout the various years at different translateX's. If it's easier to do, maybe have the projects move/snap along with the scroll? (instead of fade in/out)
 
 Here are some exmaple projects:
 

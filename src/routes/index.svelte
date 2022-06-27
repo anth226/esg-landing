@@ -63,7 +63,7 @@
 		<img class="h-12 grayscale opacity-70" src="assets/partners/unpri.png" alt="unpri" />
 	</div>
 </section>
-<section class="text-base-200 px-2 bg-white mb-16">
+<section class="text-base-200 px-2 bg-white mb-16 overflow-hidden">
 	<img
 		src="/assets/earth-asia.png"
 		class="absolute z-10 h-[400px] w-auto left-0 opacity-80"
@@ -76,9 +76,7 @@
 	/>
 	<div class="z-10 relative">
 		<div class="flex flex-wrap justify-between items-center max-w-6xl m-auto">
-			<div class="overflow-hidden">
-				<Timeline />
-			</div>
+			<Timeline />
 			<div class="max-w-lg pb-12">
 				<div class="text-gray-400 font-sans">ESG Roadmaps & Playbooks</div>
 				<div class="text-3xl mb-12 text-secondary font-bold">
