@@ -5,23 +5,85 @@
 	import { onIntersectionChange } from '$lib/actions/onIntersectionChange';
 	import TimelineItem from './TimelineItem.svelte';
 
-	const data = Array.from({ length: 7 }, (_, i) => ({
-		year: 2022 + i,
-		projects: [
-			`DEI Policy`,
-			'Procurement',
-			'Scope 3 GHG',
-			'Responsive Design',
-			`Svelte Kit ${i + 1}.0`,
-		],
-	}));
+	const data = [
+		{
+			year: 2022,
+			projects: [
+				{ name: 'DEI Policy', translateX: '-60%' },
+				{ name: 'Procurement', translateX: '-20%' },
+				{ name: 'Scope 3 GHG', translateX: '50%' },
+				{ name: 'Responsive Design', translateX: '-50%' },
+				{ name: 'ESG Baseline', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2023,
+			projects: [
+				{ name: 'Procurement', translateX: '-20%' },
+				{ name: 'SOC 2 Certification', translateX: '-50%' },
+				{ name: 'Scope 1 & 2 GHG', translateX: '20%' },
+				{ name: 'Employee Handbook', translateX: '-20%' },
+				{ name: 'Fair Wage Analysis', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2024,
+			projects: [
+				{ name: 'Hazardous Waste Policy', translateX: '-60%' },
+				{ name: 'Local Community Engagement', translateX: '-20%' },
+				{ name: 'Remote Working Policy', translateX: '50%' },
+				{ name: 'Security Control Certification', translateX: '-50%' },
+				{ name: 'Disaster Recovery Process', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2025,
+			projects: [
+				{ name: 'Disaster Recovery Process', translateX: '-50%' },
+				{ name: 'Impact Analysis', translateX: '-60%' },
+				{ name: 'Stakeholder Surveys', translateX: '50%' },
+				{ name: 'Benchmark Analysis', translateX: '-20%' },
+				{ name: 'Svelte Kit 1.0', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2026,
+			projects: [
+				{ name: 'Stakeholder Surveys', translateX: '-20%' },
+				{ name: 'Benchmark Analysis', translateX: '-50%' },
+				{ name: 'Svelte Kit 1.0', translateX: '50%' },
+				{ name: 'Svelte Kit 2.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 3.0', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2027,
+			projects: [
+				{ name: 'Svelte Kit 3.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 4.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 5.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 6.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 7.0', translateX: '-50%' },
+			],
+		},
+		{
+			year: 2028,
+			projects: [
+				{ name: 'Svelte Kit 7.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 8.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 9.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 10.0', translateX: '-50%' },
+				{ name: 'Svelte Kit 11.0', translateX: '-50%' },
+			],
+		},
+	];
 
 	const projectDisplayConfig = [
-		{ border: 'primary' as const, translateX: '-60%' },
-		{ border: 'gray' as const, translateX: '-20%' },
-		{ border: 'secondary' as const, translateX: '50%' },
-		{ border: 'gray' as const, translateX: '-50%' },
-		{ border: 'primary' as const, translateX: '-50%' },
+		{ border: 'primary' as const },
+		{ border: 'gray' as const },
+		{ border: 'secondary' as const },
+		{ border: 'gray' as const },
+		{ border: 'primary' as const },
 	];
 
 	let ulElement: HTMLUListElement;
@@ -114,11 +176,11 @@
 	/>
 
 	<!-- projects -->
-	{#each projects as project, idx (selectedYear + project)}
-		{@const translateX = projectDisplayConfig[idx]?.translateX ?? '-50%'}
+	{#each projects as project, idx}
+		{@const translateX = project.translateX || '-50%'}
 		{@const flyDirection = parseInt(translateX) >= -50 ? 1 : -1}
 		<div
-			class="absolute text-gray-600 hover:text-primary "
+			class="absolute text-gray-600 hover:text-primary transition-transform"
 			style="
 				top: {90 + idx * 70}px;
 				left: {axisX}px;
@@ -126,7 +188,7 @@
 			in:fly={{ x: flyDirection * 100, delay: 200, duration: 200 }}
 			out:fly={{ x: flyDirection * 100, duration: 200 }}
 		>
-			<TimelineItem border={projectDisplayConfig[idx].border}>{project}</TimelineItem>
+			<TimelineItem border={projectDisplayConfig[idx].border}>{project.name}</TimelineItem>
 		</div>
 	{/each}
 </div>
