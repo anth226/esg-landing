@@ -1,5 +1,5 @@
 <div class="max-w-6xl mx-auto">
-	<div class="grid grid-cols-2 place-items-center">
+	<div class="grid md:grid-cols-2 place-items-center">
 		<div class="p-10 font-inter">
 			<h2 class="text-2xl font-bold mb-5 text-[#5D6175]">Solving All ESG Pain Points</h2>
 			<p class="leading-relaxed">
@@ -15,8 +15,7 @@
 			</p>
 		</div>
 		<img src="/assets/ecology1.png" />
-		<img src="/assets/ecology2.png" />
-		<div class="p-10 font-inter">
+		<div class="p-10 font-inter md:order-2">
 			<h2 class="text-2xl font-bold mb-5 text-[#5D6175]">Solving All ESG Pain Points</h2>
 			<p class="leading-relaxed">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -30,10 +29,11 @@
 				facilisis mauris sit. Dictum non consectetur a erat nam at lectus.
 			</p>
 		</div>
+		<img src="/assets/ecology2.png" class="md:order-1" />
 	</div>
-	<div class="grid grid-cols-[auto,1fr] font-inter gap-10 p-10">
+	<div class="grid lg:grid-cols-[auto,1fr] font-inter gap-10 p-10">
 		<aside>
-			<ul>
+			<ul class="flex lg:flex-col gap-3">
 				<li class="cursor-pointer p-1 font-bold text-[#ADAEB7] text-lg hover:border-b-2">
 					Venture Capital Funds
 				</li>
