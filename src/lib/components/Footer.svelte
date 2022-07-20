@@ -1,6 +1,6 @@
 <footer class="flex flex-wrap items-stretch px-16 footer-background">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex-col justify-center">
-		<div class="grid grid-cols-2 gap-3">
+		<div class="grid lg:grid-cols-2 gap-3">
 			<div class="flex-1">
 				<div class="flex flex-wrap gap-16 py-24 align-center">
 					<img class="h-20" src="assets/logo.png" alt="esgi-logo" />
