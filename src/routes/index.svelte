@@ -111,7 +111,6 @@
 </section> -->
 <AboutThePlatform />
 
-<section>asfd</section>
 
 <!-- <section class="bg-secondary flex flex-wrap justify-center">
 	<svg
