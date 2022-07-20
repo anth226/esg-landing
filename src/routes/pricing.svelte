@@ -55,60 +55,34 @@
 					in:fly={{ duration: 250, x: 300, delay: 500 }}
 				>
 					<PricingCard
-						title="Funds"
-						price="$4,999 / year"
+						title="Fund"
+						price="$3,999 / year"
 						description="Less than $500 million in AUM."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 1 (one) project',
-							'3 Months support',
-						]}
-						btnText="Choose Personal"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 					/>
 					<PricingCard
-						title="Funds"
-						price="$9,999 / year"
+						title="Fund"
+						price="$8,999 / year"
 						description="From $500 million to $1 billion in AUM."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 1 (one) project',
-							'3 Months support',
-						]}
-						btnText="Choose Personal"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
+						btnHighlight
 					/>
 					<PricingCard
-						title="Funds"
+						title="Fund"
 						price="$14,999 / year"
 						description="From $1 billion to $10 billion in AUM."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 1 (one) project',
-							'3 Months support',
-						]}
-						btnText="Choose Personal"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 					/>
 					<PricingCard
-						title="Funds"
+						title="Fund"
 						price="$29,999 / year"
 						description="Over $10 billion in AUM."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 1 (one) project',
-							'3 Months support',
-						]}
-						btnText="Choose Personal"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
+						btnHighlight
 					/>
 				</div>
 			{:else}
@@ -120,59 +94,31 @@
 					<PricingCard
 						title="Start-up"
 						price="$999 / year"
-						description="From $0 to $1 million in revenue."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 1 (one) project',
-							'3 Months support',
-						]}
-						btnText="Choose Personal"
+						description="For pre-revenue companies."
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 					/>
 					<PricingCard
 						title="Growth Equity"
-						price="$4,999 / year"
-						description="From $1 to $50 million in revenue."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 3 (Three) project',
-							'4 Months support',
-						]}
-						btnText="Choose Business"
+						price="$3,999 / year"
+						description="From $0 to $50 million in revenue."
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 						btnHighlight
 					/>
 					<PricingCard
 						title="Middle Market"
-						price="$9,999 / year"
+						price="$8,999 / year"
 						description="From $50 to $500 million in revenue."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on Unlimited project',
-							'12 Months support',
-						]}
-						btnText="Choose Professional"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 					/>
 					<PricingCard
 						title="Enterprise"
-						price="$19,999 / year"
+						price="$15,999 / year"
 						description="From $500 million and up in revenue."
-						features={[
-							'Unlimited Users',
-							'All UI components',
-							'Lifetime access',
-							'Free updates',
-							'Use on 3 (Three) project',
-							'4 Months support',
-						]}
-						btnText="Choose Business"
+						features={['Unlimited Users', 'All UI components', 'Lifetime access', 'Free updates']}
+						btnText="Get Started"
 						btnHighlight
 					/>
 				</div>

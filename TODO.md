@@ -1,41 +1,14 @@
-## Note: I changed the 'base-100' color to be #fff white and added the #113345 navy blue as 'secondary'
+1. Center the 'Request a Demo' section on the footer (vertically). Increase the gap horizontally between them a little
 
-## ✅ 1. Fix fading between pages. It could just be Svelte, or my dev environment, but clicking on a new page 1) instantly shows new page 2) fades 3) shows new page again. Instead of 1) fades 2) shows new page
+2. Can each 'schedule a demo' & 'get started' button send the user to a contact page (not on the menu) with their email already filled in from the previous input? See my mockup for a /contact route.
 
-## 2. ✅ Fix weird scrolling issue on pricing-- when toggling companies and funds. The responsiveness of the height of the container div for the new cards coming in and out
+3. Hook up the contact page with our sendgrid account. Have it send just a basic email template for now and I can create the html for it later. Also, is there some spam check we can implement either in sendgrid or on the site? Starting with not allowing any common domain emails (gmail, outlook, icloud, yahoo, etc), and then something for ddos? Also, would best practice be to track these in our database (noSQL MongoDB)?
 
-## 3. ✅ Add a header that fades/tranlates in once your scroll past a certain px. An example of this animation is:
+USER
+adamjace@esgi.io
+PASS
+qfq8~\_cm)[,7L&b4fgd
+2-Factor Auth
+let me know and I will send the code
 
-slack.com
-
-## 4. ✅ Add a modal to each person's picture in About Us:
-
-One modal I found:
-https://tailwindui.com/components/application-ui/overlays/modals
-
-## 5. ✅ For the next section on the homepage, 'The ESG Impact Process', re-create the look on static/examples/example.png with the five clickable buttons on the left.
-
-The example is from novisto.com
-
-I can transform the pictures to that perspective unless you know how to with the perscpective() css thing. Just use filler images for now and I can change them later.
-
-## 6. ✅ For the Timeline, have different projects throughout the various years at different translateX's. If it's easier to do, maybe have the projects move/snap along with the scroll? (instead of fade in/out)
-
-Here are some exmaple projects:
-
-ESG Baseline
-Procurement
-SOC 2 Certification
-Scope 1 & 2 GHG
-Scope 3 GHG
-DEI Policy
-Employee Handbook
-Fair Wage Analysis
-Hazardous Waste Policy
-Local Community Engagement
-Remote Working Policy
-Security Control Certification
-Disaster Rocovery Process
-Impact Analysis
-Benchmark Analysis
-Stakeholder Surveys
+3. For the solutions table, can you make each item on the list on the left have it's own table descriptions (needs & solutions, so 8 total for each). Active item will have the primary border color underneath (same as hover). I will fill in specific content later.

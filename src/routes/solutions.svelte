@@ -1,66 +1,74 @@
-<div class="max-w-6xl mx-auto">
-	<div class="grid md:grid-cols-2 place-items-center">
-		<div class="p-10 font-inter">
-			<h2 class="text-2xl font-bold mb-5 text-[#5D6175]">Solving All ESG Pain Points</h2>
-			<p class="leading-relaxed">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Turpis in eu mi bibendum neque egestas. Risus in hendrerit
-				gravida rutrum quisque non. Quam id leo in vitae turpis massa sed. Vulputate ut pharetra sit
-				amet aliquam id diam maecenas. Urna nunc id cursus metus aliquam. Augue eget arcu dictum
-				varius duis at consectetur lorem donec. Leo duis ut diam quam nulla porttitor massa id.
-				Commodo elit at imperdiet dui accumsan sit amet nulla. Augue interdum velit euismod in
-				pellentesque massa. Morbi enim nunc faucibus a pellentesque. Arcu felis bibendum ut
-				tristique et egestas. Ornare suspendisse sed nisi lacus. Orci sagittis eu volutpat odio
-				facilisis mauris sit. Dictum non consectetur a erat nam at lectus.
-			</p>
+<section class="bg-[#F7F7F7] shadow">
+	<div class="max-w-6xl mx-auto ">
+		<div class="flex flex-col w-full justify-center items-start py-4">
+			<div class="mt-20 text-primary font-bold text-xl">A Platform Built for Everyone</div>
+			<div class="text-6xl text-secondary mt-4">
+				Solving <span class="custom-underline underline-offset-4">all</span> ESG Pain Points.
+			</div>
 		</div>
-		<img src="/assets/ecology1.png" />
-		<div class="p-10 font-inter md:order-2">
-			<h2 class="text-2xl font-bold mb-5 text-[#5D6175]">Solving All ESG Pain Points</h2>
-			<p class="leading-relaxed">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Turpis in eu mi bibendum neque egestas. Risus in hendrerit
-				gravida rutrum quisque non. Quam id leo in vitae turpis massa sed. Vulputate ut pharetra sit
-				amet aliquam id diam maecenas. Urna nunc id cursus metus aliquam. Augue eget arcu dictum
-				varius duis at consectetur lorem donec. Leo duis ut diam quam nulla porttitor massa id.
-				Commodo elit at imperdiet dui accumsan sit amet nulla. Augue interdum velit euismod in
-				pellentesque massa. Morbi enim nunc faucibus a pellentesque. Arcu felis bibendum ut
-				tristique et egestas. Ornare suspendisse sed nisi lacus. Orci sagittis eu volutpat odio
-				facilisis mauris sit. Dictum non consectetur a erat nam at lectus.
-			</p>
+		<div class="mb-16 text-black max-w-2xl">
+			Lorem ipsum. Something about ESG. Something about Impact. Something about how our platfrom
+			touches all asset groups since both esg and imapct touch everything.
 		</div>
-		<img src="/assets/ecology2.png" class="md:order-1" />
 	</div>
-	<div class="grid lg:grid-cols-[auto,1fr] font-inter gap-10 p-10">
-		<aside>
-			<ul class="flex lg:flex-col gap-3">
-				<li class="cursor-pointer p-1 font-bold text-[#ADAEB7] text-lg hover:border-b-2">
-					Venture Capital Funds
+</section>
+<section class="max-w-6xl mx-auto">
+	<div class="grid lg:grid-cols-[auto,1fr] gap-16 p-10 mt-8">
+		<aside class="">
+			<!-- style --fa-primary-color and secondary are for icons-->
+			<ul
+				class="flex lg:flex-col gap-3"
+				style="--fa-primary-color: #113345; --fa-secondary-color: #113345"
+			>
+				<li
+					class=" cursor-pointer p-1 font-bold text-[#757575] text-lg border-b-2 hover:border-primary"
+				>
+					<i class="absolute fa-duotone fa-briefcase " />
+					<span class="ml-14">Venture Capital</span>
 				</li>
-				<li class="cursor-pointer p-1 font-bold text-[#ADAEB7] text-lg hover:border-b-2">
-					Private Equity Groups
+				<li
+					class="cursor-pointer p-1 font-bold text-[#757575] text-lg border-b-2 hover:border-primary"
+				>
+					<i class="absolute fa-duotone fa-circle-nodes " />
+					<span class="ml-14">Private Equity</span>
 				</li>
-				<li class="cursor-pointer p-1 font-bold text-[#ADAEB7] text-lg hover:border-b-2">
-					Private Companies
+				<li
+					class="cursor-pointer p-1 font-bold text-[#757575] text-lg border-b-2 hover:border-primary"
+				>
+					<i class="absolute fa-duotone fa-house-building " />
+					<span class="ml-14">Public Companies</span>
+				</li>
+				<li
+					class="cursor-pointer p-1 font-bold text-[#757575] text-lg border-b-2 hover:border-primary"
+				>
+					<i class="absolute fa-duotone fa-briefcase " />
+					<span class="ml-14">Private Companies</span>
+				</li>
+				<li
+					class="cursor-pointer p-1 font-bold text-[#757575] text-lg border-b-2 hover:border-primary"
+				>
+					<i class="absolute fa-duotone fa-book-open-reader " />
+					<span class="ml-14">Start-ups</span>
 				</li>
 			</ul>
 		</aside>
 		<main class="grid gap-5">
 			<header class="grid grid-cols-[1fr,auto] gap-10 items-center">
-				<h2 class="text-3xl uppercase font-bold text-[#5D6175]">
-					How does ESG impact meet an <span class="text-[#9ccbbf]">asset manager's</span> needs?
+				<h2 class="text-xl font-bold text-[#757575]">
+					How ESG Impact solves <span class="text-primary">{'Venture Capital'}'s</span> pain points...
 				</h2>
-				<button class="rounded-full text-white text-sm font-bold p-4 bg-[#9ccbbf]"
-					>Schedule a demo now</button
-				>
+				<div class="text-white btn btn-sm glass font-bold bg-primary hover:bg-secondary">
+					Schedule a Demo
+				</div>
 			</header>
+			<hr />
 			<table class="col-span-full">
-				<div class="relative  grid grid-cols-2">
-					<th class="text-xl font-normal"> Asset manager's need... </th>
-					<th class="text-xl font-normal"> ESG Impact has... </th>
+				<div class="relative grid grid-cols-2 border-2">
+					<th class="text-xl font-normal">Venture Capital need... </th>
+					<th class="text-xl font-normal">ESG Impact has... </th>
 				</div>
 				<div
-					class="relative  grid grid-cols-2 align-center border-2 align-center my-5 min-h-[7.5rem]"
+					class="relative grid grid-cols-2 align-center border-2 align-center my-5 min-h-[7.5rem]"
 				>
 					<td>ESG-related asset allocation customization capabilities</td>
 					<td
@@ -69,7 +77,7 @@
 						companies, 220,000+ funds, 198 countries, and 188 local governments)</td
 					>
 					<div
-						class="font-bold text-[#9ccbbf] aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
+						class="font-bold text-primary aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
 					>
 						1
 					</div>
@@ -83,7 +91,7 @@
 						Taxonomy, and TCFD capabilities</td
 					>
 					<div
-						class="font-bold text-[#9ccbbf] aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
+						class="font-bold text-primary aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
 					>
 						2
 					</div>
@@ -97,7 +105,7 @@
 						different products and services for all 16 measurable UN SDGs</td
 					>
 					<div
-						class="font-bold text-[#9ccbbf] aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
+						class="font-bold text-primary aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
 					>
 						3
 					</div>
@@ -108,7 +116,7 @@
 					<td>Seamless integration into your existing workflow</td>
 					<td>Fully-adaptable API connection or web-based widgets</td>
 					<div
-						class="font-bold text-[#9ccbbf] aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
+						class="font-bold text-primary aspect-square w-20 h-20 opacity-75 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full grid place-items-center text-2xl p-5 border"
 					>
 						4
 					</div>
@@ -116,14 +124,11 @@
 			</table>
 		</main>
 	</div>
-</div>
+</section>
 
 <style lang="postcss">
 	* {
 		box-sizing: border-box;
-	}
-	.font-inter {
-		font-family: Inter, sans-serif;
 	}
 	td,
 	th {
@@ -134,12 +139,38 @@
 	}
 	td:nth-child(2n-1),
 	th:nth-child(2n-1) {
-		@apply bg-gray-100;
+		@apply bg-[#f7f7f7];
 	}
 	td:nth-child(2n -1) {
 		@apply pr-10;
 	}
 	td:nth-child(2n) {
 		@apply text-right pl-10;
+	}
+	.custom-underline {
+		text-decoration-line: underline;
+		text-decoration-thickness: 2px;
+	}
+
+	.custom-button {
+		text-align: left;
+		height: 75px;
+		font-size: large;
+		font-weight: 700;
+	}
+	.solutions-header {
+		background: white;
+		height: 500px;
+	}
+	.custom-underline {
+		text-decoration-line: underline;
+		text-decoration-thickness: 2px;
+	}
+
+	.custom-button {
+		text-align: left;
+		height: 75px;
+		font-size: large;
+		font-weight: 700;
 	}
 </style>

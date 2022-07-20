@@ -5,7 +5,7 @@
 				<div class="flex flex-wrap gap-16 py-24 align-center">
 					<img class="h-20" src="assets/logo.png" alt="esgi-logo" />
 					<h2 class="text-3xl text-white">ESG Impact</h2>
-					<div class="text-lg text-white">
+					<div class="text-lg text-white font-sans">
 						Democratizing ESG for
 						<br />
 						Private Markets
