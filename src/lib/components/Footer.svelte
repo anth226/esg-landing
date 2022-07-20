@@ -1,4 +1,4 @@
-<footer class="flex flex-wrap items-stretch px-16 footer-background">
+<footer class="flex flex-wrap items-stretch p-5 footer-background">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex-col justify-center">
 		<div class="grid lg:grid-cols-2 gap-3">
 			<div class="flex-1">
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex-1 px-20 py-24">
+			<div class="flex-1">
 				<div class="font-sans text-sm mb-4 text-white">See ESG Impact in action</div>
 				<h2 class="text-5xl text-white mb-4">Request a demo</h2>
 				<div class="form-control font-sans flex-1 my-10">

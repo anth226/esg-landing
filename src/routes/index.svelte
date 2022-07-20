@@ -111,7 +111,6 @@
 </section> -->
 <AboutThePlatform />
 
-
 <!-- <section class="bg-secondary flex flex-wrap justify-center">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
