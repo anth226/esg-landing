@@ -8,13 +8,13 @@
 		{ label: 'About Us', href: '/about' },
 	];
 	let scrollY: number;
-	$: fixed = scrollY > 64;
+	$: fixed = scrollY > 612;
 </script>
 
 <svelte:window bind:scrollY />
 
 <nav
-	class="navbar bg-secondary-focus text-white flex-none h-16 z-30"
+	class="navbar bg-secondary-focus text-white flex-none h-16 z-30 shadow-xl"
 	class:absolute={!fixed}
 	class:fixed
 >
@@ -24,13 +24,14 @@
 				<img src="/assets/logo.png" alt="ESG Impact Logo" class="w-[3.5ch]" />
 				<span class="">ESG Impact</span>
 			</a>
-
-			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-lg ">
+			<ul class="menu menu-separated hidden lg:menu-horizontal gap-2 text-sm">
 				{#each links as { label, href }}
 					{@const active = $page.url.pathname === href}
 					<li>
-						<a {href} class:text-primary={active} class="link-underline link-underline-transparent"
-							>{label}</a
+						<a
+							{href}
+							class:text-primary={active}
+							class="link-underline link-underline-transparent font-sans">{label}</a
 						>
 					</li>
 				{/each}
@@ -39,12 +40,12 @@
 		<div class="flex gap-3">
 			<a
 				href="https://app.esgi.io/auth/registration"
-				class="btn btn-sm btn-outline hidden lg:inline-flex text-white hover:bg-white hover:text-secondary hover:outline-white"
+				class="btn btn-sm glass hidden lg:inline-flex text-white hover:bg-white hover:text-secondary hover:outline-white"
 				>Sign Up</a
 			>
 			<a
 				href="https://app.esgi.io/auth/login"
-				class="btn btn-sm hidden lg:inline-flex btn-primary text-white">Sign In</a
+				class="btn btn-sm bg-primary glass hidden lg:inline-flex btn-primary text-white">Sign In</a
 			>
 			<div class="dropdown dropdown-end">
 				<button tabindex="0" class="btn btn-ghost lg:hidden">

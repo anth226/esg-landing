@@ -4,75 +4,66 @@
 			name: 'Adam Jace',
 			role: 'Co-Founder / Product & Execution',
 			image: '/assets/profiles/adam.png',
+			bio: `Adam was born in Papatoetoe, New Zealand, and has lived in Malaysia, Australia, Minnesota, and Wisconsin. He graduated magna cum laude from the University of Dallas where he played for their rugby team. Adam attended Vanderbilt University as part of their Master of Science in Finance program. His background is in buy-side M&A and investment banking. He enjoys competitive sports, travelling, composing music, and is an avid chess player.`,
 		},
 		{
 			name: 'Max Mona',
 			role: 'Co-Founder / Business Development',
 			image: '/assets/profiles/max.png',
-		},
-		{
-			name: 'Anna Ward',
-			role: 'VP of ESG',
-			image: '/assets/profiles/profile3.jpg',
+			bio: `Max, an Annapolis, MD native recently graduated with magna cum laude honors from Concordia College (MN) and was also a member of their nationally ranked NCAA ice hockey program. Max has worked extensively in private markets and with start-ups having spent time with LandFund Partners, STAX Financial Technologies, GoAhead Ventures, and most recently Atento Capital as an entrepreneur-in-residence. He enjoys music production, mountain climbing, and spending time with his dogs Brooks & Sunday in his free time.`,
 		},
 		{
 			name: 'Stanley Ho',
 			role: 'ESG Analyst',
-			image: '/assets/profiles/profile1.jpg',
+			image: '/assets/profiles/stanley.png',
+			bio: `A Toronto native, passionate creative, and adventurous eater, Stanley attended the Ivey Business School at Western University in Canada. Stanley previously worked in social impact, where he led the launch of a multimillion-dollar affordable housing debt fund on the East Coast, and in strategy consulting, where he drove ESG engagements across multiple public and private market sectors as part of KPMG’s Sustainability Services practice. In his free time, Stanley spends time with his dog Apollo, plays video games, and designs clothing.`,
 		},
 		{
 			name: 'Blake Broadnax',
 			role: 'ESG Analyst',
-			image: '/assets/profiles/profile2.jpg',
+			image: '/assets/profiles/blake.png',
+			bio: `Blake was raised in Madison, WI and graduated from The University of Michigan where he holds a B.A. in Political Science. Prior to ESG Impact, Blake worked at TPG where he was responsible for ESG strategy, portfolio company engagements, and assessing ESG performance for TPG Private Equity and Growth Equity portfolio companies. Blake also has ESG experience within Public Markets as he started his career on the ESG team at Wellington Management where he primarily covered Tech and Financials. In his free time, he enjoys watching basketball, listening to music, and hiking.`,
 		},
 		{
 			name: 'Chris Ma',
 			role: 'Software Engineer',
 			image: '/assets/profiles/chris.png',
+			bio: `Chris is a senior software developer with over 12 years of experience specializing in web and blockchain development. Most recently, Chris has spent time with ABSTRAKT helping lead the development of their Blockchain as a Service business model. Before that, Chris had spent over 3 years working as a senior software engineer with Microsoft.`,
 		},
 		{
-			name: 'Stas Gagarin',
+			name: 'Wade Fletcher',
 			role: 'Software Engineer',
-			image: '/assets/profiles/profile1.jpg',
+			image: '/assets/profiles/wade.png',
+			bio: `Chris is a senior software developer with over 12 years of experience specializing in web and blockchain development. Most recently, Chris has spent time with ABSTRAKT helping lead the development of their Blockchain as a Service business model. Before that, Chris had spent over 3 years working as a senior software engineer with Microsoft.`,
 		},
 		{
 			name: 'Linda Isaacson',
 			role: 'Commercial Real Estate Advisor',
 			image: '/assets/profiles/linda.png',
+			bio: `Linda J. Isaacson is a globally recognized strategic thinker, accelerator of change, and developer of high-impact organizational cultures, with a deep understanding of the environmental, societal, technological factors - reshaping the built environment. She is Partner and Head of ESG & Impact for global real estate private equity firm Asia Capital Real Estate (ACRE), where she leads the firm's environmental, social, and governance (ESG) practices, ensuring ongoing investment decisions, operational actions and overall business philosophy reflect its core principles and those of its investors, including environmental justice, economic equality, social initiatives, and transparency.`,
 		},
 		{
 			name: 'Mark Cohen',
 			role: 'ESG Advisor',
 			image: '/assets/profiles/mark.png',
-		},
-		{
-			name: 'Tony Jace',
-			role: 'Business Advisor',
-			image: '/assets/profiles/profile1.jpg',
-		},
-		{
-			name: 'Thomas Burke',
-			role: 'Business Development Advisor',
-			image: '/assets/profiles/profile2.jpg',
+			bio: `Dr. Mark Cohen is an ESG thought leader and subject matter expert having spent over 35 years teaching at Vanderbilt University as the Justin Potter Professor of American Competitive Analysis & Professor of Law. He has spent over 10 years working as a member of the External Sustainability Council for ExxonMobil and has been an active member of the Board of Directors for the Global Reporting Initiative (GRI), one of the leading ESG reporting agencies in the world.`,
 		},
 	];
 </script>
 
 <section class="text-black bg-white">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex-col justify-center">
-		<div class="grid grid-cols-8 gap-3">
+		<div class="grid grid-cols-8 gap-6">
 			<div class="col-span-5">
 				<div class="flex flex-col w-full justify-center items-start py-4">
 					<div class="mt-20 text-primary font-bold text-xl">Our Mission & Values</div>
 					<div class="text-6xl text-secondary mt-4 half-background">Guiding philosophy.</div>
 				</div>
 				<div class="text-lg mt-6">
-					<div>
-						The mission of ESG Impact is to <span>democratize</span> ESG & <span>illustrate</span> Impact.
-					</div>
+					<div>The mission of ESG Impact is to democratize ESG & Impact for private markets.</div>
 					<div class="mt-6">
-						We provide accessible and pragmatic frameworks for companies and funds to assess and
-						address ESG metrics most material to their operations. We believe that business ethics
+						We provide accessible and pragmatic solutions for companies and funds to assess and
+						address ESG metrics most salient to their operations. We believe that business ethics
 						should not be transactional or cost a fortune. We understand that greenwashing is the
 						result of pushing ESG too far, using the complexity and myriad of frameworks as a means
 						for profitable confusion instead of a call for unification.
@@ -123,11 +114,11 @@
 			</div>
 		</div>
 
-		<div class="grid grid-cols-4 gap-8 mt-8">
-			{#each team as { name, role, image }, idx}
+		<div class="grid grid-cols-4 gap-12 mt-8">
+			{#each team as { name, role, image, bio }, idx}
 				<label for="team-modal-{idx}" class="modal-button">
 					<div class="bg-secondary h-6 w-6 z-10 absolute" />
-					<div class="bg-secondary rounded-xl">
+					<div class="bg-white rounded-xl">
 						<img alt={name} src={image} class="hover:cursor-pointer rounded-xl hover:opacity-75" />
 					</div>
 					<div class="text-secondary text-xl mt-2 font-bold">{name}</div>
@@ -142,11 +133,7 @@
 						<div class="py-4">
 							<img src={image} alt={name} width="400" height="400" class="float-left mr-4" />
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate reiciendis
-								architecto ipsam. Eveniet expedita quibusdam in. Repellendus quia, perferendis vel
-								tempore fuga nisi facere. Illum sapiente laboriosam deleniti nesciunt autem.
-								Assumenda enim, omnis ducimus accusamus optio eligendi, illum nemo vel laborum
-								repellendus ea earum exercitationem distinctio. Molestiae aliquid saepe et!
+								{bio}
 							</p>
 						</div>
 					</label>
@@ -155,10 +142,3 @@
 		</div>
 	</div>
 </section>
-
-<!-- <img src="/examples/team-example.webp" alt="ex" /> -->
-<style>
-	.half-background {
-		background: linear-gradient(to top, #fcf8e3 40%, transparent 40%);
-	}
-</style>

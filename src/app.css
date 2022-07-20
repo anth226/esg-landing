@@ -31,3 +31,7 @@ body,
 	height: 30px;
 	background-color: hsl(var(--p));
 }
+
+.half-background {
+	background: linear-gradient(to top, #fcf8e3 40%, transparent 40%);
+}

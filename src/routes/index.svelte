@@ -2,25 +2,24 @@
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import Timeline from '$lib/components/Timeline/Timeline.svelte';
-	import AboutThePlatform from './_index/AboutThePlatform.svelte';
 </script>
 
 <svelte:head>
 	<title>ESG Impact</title>
 </svelte:head>
-
 <section class="flex-1 flex flex-col gradient-background">
 	<div class="max-w-6xl w-full mx-auto px-2 flex-1 flex flex-col justify-center">
 		<div class="flex flex-col lg:flex-row w-full justify-between items-center py-4">
 			<div class="max-w-lg">
 				<h1 class="text-6xl">
-					<div class="text-white">The Pragmatic</div>
-					<p class="text-primary hover:text-primary-focus">ESG Platform</p>
-					<hr class="border-primary w-8/12" />
+					<div class="text-white">
+						The Pragmatic <p class="text-primary">ESG Platform</p>
+					</div>
+					<hr class="border-primary w-[68%]" />
 				</h1>
-				<p class="py-12 font-sans text-gray-300 text-lg">
-					Transparency-as-a-Service ESG for venture capital funds, private equity groups, and
-					companies.
+				<p class="py-12 font-sans text-gray-300 text-md">
+					Transparency-as-a-Service ESG for venture capital funds, private equity groups, family
+					offices, and companies.
 				</p>
 				<div class="flex flex-wrap gap-3 w-full">
 					<div class="form-control font-sans flex-1">
@@ -63,6 +62,13 @@
 		<img class="h-12 grayscale opacity-70" src="assets/partners/unpri.png" alt="unpri" />
 	</div>
 </section>
+<section class="text-base-200 px-2 bg-white mb-12">
+	<div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center">
+		<div class="text-secondary text-2xl font-sans">
+			Managing ESG & Impact with Technology is Sustainable
+		</div>
+	</div>
+</section>
 <section class="text-base-200 px-2 bg-white mb-16 overflow-hidden">
 	<img
 		src="/assets/earth-asia.png"
@@ -93,8 +99,8 @@
 					>
 				</div>
 				<p class="font-sans mb-12 text-secondary">
-					ESG is a maze. Focus on your business; let us layout best-practices and guide you through
-					each and every one. Lorem Ipsum and more info.
+					ESG is a maze. Focus on your business; let us loremipsu mand et amare quid quick leris
+					lupis monspae toretly lorem ip
 				</p>
 				<div class="text-primary font-sans text-sm">
 					Compliance | ESG | Impact | Benchmarking | Roadmaps | Playbooks
@@ -103,24 +109,7 @@
 		</div>
 	</div>
 </section>
-<!-- <section class="bg-[#F7F7F7]">
-	<div class="items-center max-w-6xl m-auto">
-		<div>NEXT SECTION HERE</div>
-		<img src="assets/example.png" class="h-[350px]" />
-	</div>
-</section> -->
-<AboutThePlatform />
 
-<!-- <section class="bg-secondary flex flex-wrap justify-center">
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		fill="none"
-		preserveAspectRatio="none"
-		viewBox="0 0 1680 40"
-		class="w-full -translate-y-px rotate-180"
-		><path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" /></svg
-	>
-</section> -->
 <style lang="postcss">
 	.gradient-background {
 		background: url('/assets/particles.png'),

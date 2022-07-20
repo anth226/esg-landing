@@ -10,7 +10,7 @@
 			year: 2022,
 			projects: [
 				{ name: 'DEI Policy', translateX: '-60%' },
-				{ name: 'Procurement', translateX: '-20%' },
+				{ name: 'Health and Safety Training', translateX: '-20%' },
 				{ name: 'Scope 3 GHG', translateX: '50%' },
 				{ name: 'Responsive Design', translateX: '-50%' },
 				{ name: 'ESG Baseline', translateX: '-50%' },
@@ -43,37 +43,17 @@
 				{ name: 'Impact Analysis', translateX: '-60%' },
 				{ name: 'Stakeholder Surveys', translateX: '50%' },
 				{ name: 'Benchmark Analysis', translateX: '-20%' },
-				{ name: 'Svelte Kit 1.0', translateX: '-50%' },
+				{ name: 'Data Breach Recovery Guide', translateX: '-50%' },
 			],
 		},
 		{
 			year: 2026,
 			projects: [
 				{ name: 'Stakeholder Surveys', translateX: '-20%' },
-				{ name: 'Benchmark Analysis', translateX: '-50%' },
-				{ name: 'Svelte Kit 1.0', translateX: '50%' },
-				{ name: 'Svelte Kit 2.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 3.0', translateX: '-50%' },
-			],
-		},
-		{
-			year: 2027,
-			projects: [
-				{ name: 'Svelte Kit 3.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 4.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 5.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 6.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 7.0', translateX: '-50%' },
-			],
-		},
-		{
-			year: 2028,
-			projects: [
-				{ name: 'Svelte Kit 7.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 8.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 9.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 10.0', translateX: '-50%' },
-				{ name: 'Svelte Kit 11.0', translateX: '-50%' },
+				{ name: 'Renewable Energy Purchase Plans', translateX: '-50%' },
+				{ name: 'Climate Risk Resilience Planning', translateX: '50%' },
+				{ name: 'Board Equity Policy', translateX: '-50%' },
+				{ name: 'Internal Upskilling Program', translateX: '-50%' },
 			],
 		},
 	];
