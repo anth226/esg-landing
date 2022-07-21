@@ -1,6 +1,11 @@
+<script lang="ts">
+	/// STATE ///
+	import { email } from '$lib/stores/user';
+</script>
+
 <footer class="flex flex-wrap items-stretch p-5 footer-background">
 	<div class="max-w-6xl w-full mx-auto flex-1 flex-col justify-center">
-		<div class="grid lg:grid-cols-2 gap-3">
+		<div class="grid lg:grid-cols-2 lg:gap-20 gap-10">
 			<div class="flex-1">
 				<div class="flex flex-wrap gap-16 py-24 align-center">
 					<img class="h-20" src="assets/logo.png" alt="esgi-logo" />
@@ -47,18 +52,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex-1">
+			<div class="flex-1 grid content-center">
 				<div class="font-sans text-sm mb-4 text-white">See ESG Impact in action</div>
 				<h2 class="text-5xl text-white mb-4">Request a demo</h2>
 				<div class="form-control font-sans flex-1 my-10">
 					<input
-						type="text"
+						type="email"
 						id="hero-email"
 						placeholder="Email address..."
 						class="input bg-white text-secondary"
+						bind:value={$email}
 					/>
 				</div>
-				<button class="btn text-lg gap-2 glass text-white font-bold">
+				<a class="btn text-lg gap-2 glass text-white font-bold" href="/contact">
 					Get Started
 					<svg
 						class="h-4 w-4"
@@ -69,7 +75,7 @@
 					>
 						<path d="M0 5.318h13.808m0 0L10 1.5m3.808 3.818L10 9.5" />
 					</svg>
-				</button>
+				</a>
 			</div>
 		</div>
 	</div>

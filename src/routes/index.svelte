@@ -1,7 +1,11 @@
 <script lang="ts">
+	/// COMPONENTS ///
 	import Globe from '$lib/components/Globe.svelte';
 	import Stat from '$lib/components/Stat.svelte';
 	import Timeline from '$lib/components/Timeline/Timeline.svelte';
+
+	/// STATE ///
+	import { email } from '$lib/stores/user';
 </script>
 
 <svelte:head>
@@ -24,13 +28,14 @@
 				<div class="flex flex-wrap gap-3 w-full">
 					<div class="form-control font-sans flex-1">
 						<input
-							type="text"
+							type="email"
 							id="hero-email"
 							placeholder="Email address..."
 							class="input bg-white text-secondary"
+							bind:value={$email}
 						/>
 					</div>
-					<button class="btn font-sans glass">Schedule a Demo</button>
+					<a class="btn font-sans glass" href="/contact">Schedule a Demo</a>
 				</div>
 			</div>
 			<Globe />
