@@ -10,7 +10,7 @@
 	<div class="flex flex-col gap-10 p-10 lg:order-2 max-w-lg mx-auto w-full">
 		<div class="flex justify-end"><a href="/" class="text-secondary">Back to homepage</a></div>
 		<h1 class="text-5xl">Contact us</h1>
-		<form on:submit|preventDefault class="grid grid-cols-2 gap-5">
+		<form action="/api/contact" method="post" class="grid grid-cols-2 gap-5">
 			<label class="grid">
 				<span class="text-xs uppercase font-bold"> First Name</span>
 				<input

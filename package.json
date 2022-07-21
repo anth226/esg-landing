@@ -35,7 +35,9 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/poppins": "^4.5.8",
+		"@sendgrid/mail": "^7.7.0",
 		"daisyui": "^2.15.2",
+		"dotenv": "^16.0.1",
 		"three": "^0.141.0",
 		"three-stdlib": "^2.10.2"
 	}
